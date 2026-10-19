@@ -1,6 +1,6 @@
 # Integração de arte — contrato da Sprint 01
 
-Os oito pacotes Meshy recebidos em 19/10/2026 têm modelos e materiais integrados em prefabs. A aprovação artística continua pendente: faltam animações de combate, rig do Lobo e revisão autoral da arena. Ver [evidências e limites](../validation/assets/README.md).
+Os oito pacotes Meshy recebidos em 19/10/2026 têm modelos e materiais integrados em prefabs. O Lobo recebeu [rig e seis clips FK iniciais com telegraph](../validation/wolf/README.md). A aprovação artística continua pendente, incluindo animações de combate do Bastião e revisão autoral da arena. A [primeira inspeção](../validation/assets/README.md) registra o estado anterior ao rig.
 
 ## Entrega Meshy Pro → Blender → Unity
 
@@ -16,7 +16,9 @@ Os oito pacotes Meshy recebidos em 19/10/2026 têm modelos e materiais integrado
 
 `AethelLocomotionVisual` lê velocidade do CharacterController, dash e health existentes; não move objetos nem aplica dano. Reproduz somente o clip Walking fornecido. Parado, durante dash ou após morte, segura o primeiro frame desse clip: não representa animações Idle/Dash/Death prontas. Ao trocar o child do rig, reassociar Animator em AethelArtBindings e AethelLocomotionVisual e reconectar os sockets aos ossos equivalentes; não refazer código de gameplay.
 
-`Assets/Prefabs/Characters/PF_LoboEtereo.prefab`: raiz com CharacterController, AethelWolfAI, AethelHealth e AethelArtBindings. `VisualRoot` contém Animator, malha estática recebida e BiteOrigin. O Animator continua sem controller porque não foram fornecidos rig/clips; o Inspector informa a pendência. GroundCheck permanece na raiz. Alvo do lobo e câmera do Bastião são referências da instância da cena; o prefab independente não referencia objetos externos. Ao instanciar um lobo fora desta arena, chamar `Configure(playerTransform)`.
+`Assets/Prefabs/Characters/PF_LoboEtereo.prefab`: raiz com CharacterController, AethelWolfAI, AethelHealth e AethelArtBindings. `VisualRoot` mantém BiteOrigin, AethelWolfVisual e AttackTelegraph; Model_LoboEtereo contém skin de 24 ossos e Animator Generic/AC_LoboEtereo, sem root motion e com AlwaysAnimate. GroundCheck permanece na raiz. Alvo do lobo e câmera do Bastião são referências da instância da cena; o prefab independente não referencia objetos externos. Ao instanciar um lobo fora desta arena, chamar `Configure(playerTransform)`.
+
+AethelWolfVisual lê progresso de windup/recuperação, velocidade e health; não controla combate. Windup segue o timer existente, Bite aparece no término e as linhas não têm collider. Ao trocar o child do rig, reassociar Animator no presenter e em AethelArtBindings, mantendo BiteOrigin fora dos ossos. Os clips nunca aplicam dano por Animation Events. O Inspector mostra fase, aviso e progresso durante Play.
 
 Substituir apenas o child `Model_...`, preservando VisualRoot, sockets e origens. Preservar ou reassociar AethelLocomotionVisual ao novo Animator. Ao receber outro rig, conectar sockets aos ossos pela edição do prefab e atualizar as referências de AethelArtBindings. Não adicionar controladores alternativos, Rigidbody dinâmico ou colliders aos meshes visuais. Ajustar CharacterController na raiz somente após revisão do volume de gameplay desejado, sem copiar automaticamente o tamanho do modelo.
 

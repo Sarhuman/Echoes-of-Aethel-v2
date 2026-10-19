@@ -233,6 +233,9 @@ public static class AethelAssetIntegration
     {
         if(EditorApplication.isPlayingOrWillChangePlaymode || BuildPipeline.isBuildingPlayer)
             throw new InvalidOperationException("Edit visual fit only outside play/build.");
+        var wolfPrefab=AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/Characters/PF_LoboEtereo.prefab");
+        if(wolfPrefab.GetComponentInChildren<AethelWolfVisual>(true)!=null)
+            throw new InvalidOperationException("Rigged wolf already has reviewed visual fit. This legacy tool only supports the static import.");
         foreach(string name in new[]{"Arvore","LoboEtereo"})
         {
             string path=name=="Arvore"?"Assets/Prefabs/Environment/PF_BosqueArvore_01.prefab":"Assets/Prefabs/Characters/PF_LoboEtereo.prefab";

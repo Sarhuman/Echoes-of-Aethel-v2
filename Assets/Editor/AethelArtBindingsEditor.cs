@@ -19,6 +19,12 @@ public sealed class AethelArtBindingsEditor : Editor
             if (player != null) EditorGUILayout.LabelField("Stamina / dashing", $"{player.Stamina:0.0} / {player.IsDashing}");
             var wolf = bindings.GetComponent<AethelWolfAI>();
             if (wolf != null) EditorGUILayout.LabelField("Wolf windup", wolf.IsWindingUp.ToString());
+            var wolfVisual = bindings.GetComponentInChildren<AethelWolfVisual>();
+            if (wolfVisual != null)
+            {
+                EditorGUILayout.LabelField("Wolf animation", wolfVisual.CurrentState);
+                EditorGUILayout.LabelField("Telegraph / progress", $"{wolfVisual.TelegraphVisible} / {wolfVisual.DisplayedWindupProgress:P0}");
+            }
             Repaint();
         }
     }

@@ -1,0 +1,22 @@
+Unity 6000.6.6f1 / URP 17.6.0 / Windows x64 Mono D3D11
+EditMode 22/22 Passed; PlayMode 15/15 Passed
+RUNTIME_REOPEN_SNAPSHOT_UNCHANGED files=127
+[wolf-refresh.log]
+AETHEL_WOLF_EXPORT_FIT_REFRESHED restHeight=0,9000001
+AETHEL_WOLF_BINDING_AUDIT_COMPLETE
+Exiting batchmode successfully now!
+[wolf-build.log]
+AETHEL_SAVED_ARENA_VALIDATED
+AETHEL_WINDOWS_BUILD_PASSED; scene/prefab/meta SHA256 unchanged; 190306431 bytes
+Exiting batchmode successfully now!
+[wolf-windows-smoke.log]
+AETHEL_WOLF_SMOKE_HARDWARE: Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz; AMD Radeon RX 580 2048SP; RAM=16224MB
+AETHEL_WOLF_BUILD_SMOKE_PASSED
+[wolf-foundation-smoke.log]
+AETHEL_SMOKE_HARDWARE: Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz; AMD Radeon RX 580 2048SP; RAM=16224MB
+AETHEL_BUILD_SMOKE_PASSED
+[wolf-reopen.log]
+AETHEL_SAVED_ARENA_VALIDATED
+Exiting batchmode successfully now!
+AETHEL_RUN_BEFORE normalized=0,2472289 speed=0,9999924 enabled=True culling=AlwaysAnimate bone=(0.87031, 0.03226, 0.01136, 0.49131) skinScale=(1.00, 1.00, 1.00)
+AETHEL_RUN_AFTER normalized=0,419408 speed=1,000005 bone=(0.79089, 0.03356, 0.00662, 0.61101) stateRun=True

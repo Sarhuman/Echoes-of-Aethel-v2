@@ -1,0 +1,73 @@
+{
+  "baseline": "73239968af125e685f11bb5ce02d444bee7bd72e",
+  "checks": [
+    {
+      "path": "Assets/Scenes/Aethel_FirstArena.unity",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Scripts/Runtime/AethelHealth.cs",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Scripts/Runtime/AethelPlayerController.cs",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Scripts/Runtime/AethelIsometricCamera.cs",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Editor/AethelFirstArenaCreator.cs",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Art/Models/Exported/MD_LoboEtereo.fbx",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_Bastiao.prefab",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Environment/PF_BosqueArvore_01.prefab",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Environment/PF_BosquePilar_01.prefab",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Environment/PF_BosqueRocha_01.prefab",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Environment/PF_BosquePiso_01.prefab",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Scripts/Runtime/AethelWolfAI.cs",
+      "only_readonly_accessors_added": true,
+      "update_and_damage_unchanged": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_LoboEtereo.prefab",
+      "file_id": "2480947669392013457",
+      "component_preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_LoboEtereo.prefab",
+      "file_id": "9211610995387150104",
+      "component_preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_LoboEtereo.prefab",
+      "file_id": "8599776830722674748",
+      "component_preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_LoboEtereo.prefab.meta",
+      "prefab_guid_preserved": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Generic Avatar valid: True
+Skin bones: 24
+Skin triangles: 5164
+Root motion: False
+Windup: 0,46667 seconds; events=0
+Bite: 0,20000 seconds; events=0
+Idle: 2,00000 seconds; events=0
+Recovery: 0,86667 seconds; events=0
+Run: 0,46667 seconds; events=0
+Death: 1,00000 seconds; events=0
+Rest geometry height: 0,90000

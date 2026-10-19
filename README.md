@@ -32,7 +32,7 @@ O gerador **Create First Arena (one time)** é uma ação inicial explícita: re
 
 Seguir [ART_INTEGRATION.md](docs/engineering/ART_INTEGRATION.md). Modelos e texturas em `Assets/Art/`; personagens em `Assets/Prefabs/Characters/`; ambiente em `Assets/Prefabs/Environment/`. Substituir somente o child visual, preservando raiz física, VisualRoot, sockets, origens de dano e GUIDs. `AethelArtBindings` mostra os pontos de integração no Inspector. O shader original `Aethel/Painted URP` não exige assets pagos.
 
-Os oito pacotes recebidos em 19/10/2026 têm inspeção e redução de malhas em [docs/validation/assets](docs/validation/assets). Bastião possui apenas caminhada; o Lobo não possui rig/clips fornecidos. Integração técnica não significa aprovação de arte ou animação. O piso tem prefab separado para posicionamento autoral; o chão físico atual da arena é preservado.
+Os oito pacotes recebidos em 19/10/2026 têm inspeção e redução de malhas em [docs/validation/assets](docs/validation/assets). O [Lobo agora tem rig e seis clips FK iniciais, com telegraph ligado à IA](docs/validation/wolf/README.md); Bastião continua com caminhada apenas. Integração técnica não significa aprovação de arte ou animação. O piso tem prefab separado para posicionamento autoral; o chão físico atual da arena é preservado.
 
 ## Architecture
 - `Assets/Scripts/Runtime/AethelPlayerController.cs`: Input System keyboard/gamepad, movement, dash, stamina and single basic melee attack.
