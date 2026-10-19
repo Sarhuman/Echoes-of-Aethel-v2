@@ -1,8 +1,21 @@
 # Echoes of Aethel — v2
 
-**Fresh start.** Dark-fantasy isometric action RPG for Windows. Primary artistic benchmark: [Hades (2020)](https://store.steampowered.com/app/1145360/Hades/); all characters, environments and visual assets must be original.
+**Direção oficial (19/10/2026): Action Roguelite isométrico, single-player, offline**, com apresentação Dark Fantasy estilizada. A referência principal de linguagem artística e legibilidade é [Hades (2020)](https://store.steampowered.com/app/1145360/Hades/), utilizando personagens, cenários, mecânicas concretas e identidade originais.
 
-**Technical direction:** Unity 6 **Universal 3D (URP)**, real-time 3D characters/scenery and orthographic isometric camera. First scope: a small arena with Bastion, Ethereal Wolf, movement, dash/i-frames and a basic attack. This v2 is independent from the archived v1 and does **not** import its scene builders.
+**Core loop:** Cidadela dos Últimos (hub e desbloqueios permanentes) → incursão em salas com inimigos e escolhas → bênçãos temporárias → derrota/vitória → resultado persistente e retorno ao hub. **Primeiro personagem:** Bastião do Crepúsculo. **Primeiro adversário:** Lobo Etéreo. **Primeiro bioma:** Bosque das Névoas.
+
+**Tecnologia:** Unity 6 Universal 3D (URP), modelos/cenários 3D em tempo real com câmera isométrica ortográfica, Windows PC primeiro; Meshy Pro + Blender para assets originais. Sem importação indiscriminada de cenas ou código da v1.
+
+## Documentos normativos
+- [ADR-0001 — Roguelite](docs/engineering/ADR-0001-ROGUELITE.md)
+- [Visão e core loop](docs/design/ROGUELITE_VISION.md)
+- [Arquitetura e invariantes das runs](docs/engineering/ROGUELITE_ARCHITECTURE.md)
+- [Roadmap e critérios de aprovação](docs/production/ROADMAP.md)
+- [Direção artística](docs/ART_DIRECTION.md)
+
+**Estado real:** PR #1 contém scripts iniciais e uma ferramenta de criação da arena **uma única vez**, mas ainda não configura integralmente o projeto Unity nem comprova compilação, jogabilidade ou visual final. Os sistemas `RunManager`, `BoonSystem`, `RoomFlow`, geração procedural e metaprogressão estão **planejados**, não implementados. Aprovação exige playtest na Unity e build Windows.
+
+---
 
 ## Starting in Unity (one-time)
 1. Install a stable Unity 6 editor via Unity Hub, with **Windows Build Support (IL2CPP)** where needed. Record the exact installed editor version in the first project import PR.
