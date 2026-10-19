@@ -8,6 +8,16 @@ using UnityEngine;
 public sealed class WolfRigTests
 {
     [Test]
+    public void LocalFurEditsPreserveImportedUvRigAndEveryAnimationCurve()
+    {
+        var before=JsonUtility.FromJson<AethelWolfRigTools.FurContract>(System.IO.File.ReadAllText(AethelWolfRigTools.FurContractPath));
+        var after=AethelWolfRigTools.ImportedFurContract();
+        Assert.AreEqual(before.uvTriangles,after.uvTriangles,"Imported triangle UV mapping changed.");
+        Assert.AreEqual(before.bindRig,after.bindRig,"Imported bones, hierarchy or bind poses changed.");
+        Assert.AreEqual(before.animationCurves,after.animationCurves,"Geometry-only edits must not alter clips.");
+    }
+
+    [Test]
     public void UpperFurHasNoPawOrLowerLegInfluence()
     {
         WithSkin((animator,skin,visual,baked)=> {

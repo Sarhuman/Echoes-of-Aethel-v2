@@ -1,0 +1,21 @@
+{
+  "baseline": "122a299d7f67f153b75a93f308c3074ae4e8c702",
+  "preserved_signatures": {
+    "polygons": "b5528c3de13a0b90e7b88e0856883ed950dee61dd426f1a4e72ad4d1726aab56",
+    "uvs": "1e21e3ebc16b7827e54c3d90ce3659e68a1dfb121aea4898fe2738c45dfc4c28",
+    "weights": "2edd4d57e9530e281b63004c5cff163d310305f0b119b673f00d80540bff6805",
+    "bones": "c52f34b7fb02a2f9f4c6ca0b9daf78190d0e4718ea76627655e0f235a149257f"
+  },
+  "identical_animation_curve_signatures": {
+    "Bite": "daf91afb4946a6bd351f9948a9c90f0a6151b8ee50702eccca1969e57bac4b64",
+    "Death": "b4707334e74aa8b62977457829c65829b8785fe805f4736cfd1b95f42061ca3a",
+    "Idle": "47fbdc0b0ed348d848a421294ec84b576aa6f44520d6963fac5949a2fff6ebf3",
+    "Recovery": "adb93799a43ed0f84bb7b1d0a7ffd7f68fdd5c0246356bc584d276ea503301e0",
+    "Run": "19e913fc432c134b5521c9e38fe76056930d7ebd9b598d3bc632059a8f9db0ab",
+    "Windup": "d9c27d990819c6b2e4ded10bbdccf6d452a7e9b3d5c20944f23acf777e5cec78"
+  },
+  "vertices_changed": 108,
+  "vertices_unchanged": 2482,
+  "max_displacement_metres": 0.018063305951924836,
+  "only_declared_vertex_indices_changed": true
+}

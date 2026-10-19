@@ -1,0 +1,2 @@
+Explicit refresh of existing rig; no scene write.
+Rest geometry height: 0,90000

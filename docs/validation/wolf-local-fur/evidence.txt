@@ -1,0 +1,25 @@
+Unity 6000.6.6f1 / URP 17.6.0; 2026-10-19
+EditMode: 27 passed, 0 failed; PlayMode: 17 passed, 0 failed
+LOG local-baseline-unity.log
+AETHEL_WOLF_IMPORTED_FUR_BASELINE_CAPTURED
+LOG local-refresh.log
+AETHEL_WOLF_EXPORT_FIT_REFRESHED restHeight=0,9000001
+AETHEL_WOLF_BINDING_AUDIT_COMPLETE
+LOG local-build.log
+AETHEL_SAVED_ARENA_VALIDATED
+AETHEL_WINDOWS_BUILD_PASSED; scene/prefab/meta SHA256 unchanged; 190733888 bytes
+LOG local-native-wolf.log
+AETHEL_WOLF_SMOKE_HARDWARE: Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz; AMD Radeon RX 580 2048SP; RAM=16224MB
+AETHEL_WOLF_BUILD_SMOKE_PASSED
+LOG local-native-foundation.log
+AETHEL_SMOKE_HARDWARE: Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz; AMD Radeon RX 580 2048SP; RAM=16224MB
+AETHEL_BUILD_SMOKE_PASSED
+LOG local-reopen.log
+AETHEL_SAVED_ARENA_VALIDATED
+LOG .bootstrap/local-contract.log
+AETHEL_WOLF_LOCAL_FUR_CONTRACT_PRESERVED 108 vertices changed; UVs, skin, rig and keys unchanged
+Windows wolf smoke exit: 0
+Windows foundation smoke exit: 0
+Editor reopen exit: 0
+AETHEL_LOCAL_FUR_RUNTIME_REOPEN_SNAPSHOT_UNCHANGED 127 files
+AETHEL_WOLF_POLISH_FOUNDATION_PRESERVED 66 files

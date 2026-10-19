@@ -1,0 +1,135 @@
+NODE  scale=(1.00, 1.00, 1.00) pos=(0.00, 0.00, 0.00)
+NODE WolfRig scale=(1.00, 1.00, 1.00) pos=(0.00, 0.00, 0.00)
+NODE WolfRig/Root scale=(1.00, 1.00, 1.00) pos=(0.00, -0.09, -0.02)
+NODE WolfRig/Root/Pelvis scale=(1.00, 1.00, 1.00) pos=(0.00, 0.41, -0.34)
+NODE WolfRig/Root/Pelvis/HindUpper.L scale=(1.00, 1.00, 1.00) pos=(0.11, -0.03, -0.02)
+NODE WolfRig/Root/Pelvis/HindUpper.L/HindLower.L scale=(1.00, 1.00, 1.00) pos=(0.00, 0.25, 0.00)
+NODE WolfRig/Root/Pelvis/HindUpper.L/HindLower.L/HindPaw.L scale=(1.00, 1.00, 1.00) pos=(0.00, 0.19, 0.00)
+NODE WolfRig/Root/Pelvis/HindUpper.R scale=(1.00, 1.00, 1.00) pos=(-0.16, 0.01, 0.00)
+NODE WolfRig/Root/Pelvis/HindUpper.R/HindLower.R scale=(1.00, 1.00, 1.00) pos=(0.00, 0.19, 0.00)
+NODE WolfRig/Root/Pelvis/HindUpper.R/HindLower.R/HindPaw.R scale=(1.00, 1.00, 1.00) pos=(0.00, 0.25, 0.00)
+NODE WolfRig/Root/Pelvis/Spine scale=(1.00, 1.00, 1.00) pos=(0.00, 0.18, 0.00)
+NODE WolfRig/Root/Pelvis/Spine/Chest scale=(1.00, 1.00, 1.00) pos=(0.00, 0.32, 0.00)
+NODE WolfRig/Root/Pelvis/Spine/Chest/ForeUpper.L scale=(1.00, 1.00, 1.00) pos=(0.11, 0.25, 0.03)
+NODE WolfRig/Root/Pelvis/Spine/Chest/ForeUpper.L/ForeLower.L scale=(1.00, 1.00, 1.00) pos=(0.00, 0.27, 0.00)
+NODE WolfRig/Root/Pelvis/Spine/Chest/ForeUpper.L/ForeLower.L/ForePaw.L scale=(1.00, 1.00, 1.00) pos=(0.00, 0.18, 0.00)
+NODE WolfRig/Root/Pelvis/Spine/Chest/ForeUpper.R scale=(1.00, 1.00, 1.00) pos=(-0.12, 0.29, 0.03)
+NODE WolfRig/Root/Pelvis/Spine/Chest/ForeUpper.R/ForeLower.R scale=(1.00, 1.00, 1.00) pos=(0.00, 0.29, 0.00)
+NODE WolfRig/Root/Pelvis/Spine/Chest/ForeUpper.R/ForeLower.R/ForePaw.R scale=(1.00, 1.00, 1.00) pos=(0.00, 0.22, 0.00)
+NODE WolfRig/Root/Pelvis/Spine/Chest/Neck scale=(1.00, 1.00, 1.00) pos=(0.00, 0.31, 0.00)
+NODE WolfRig/Root/Pelvis/Spine/Chest/Neck/Head scale=(1.00, 1.00, 1.00) pos=(0.00, 0.21, 0.00)
+NODE WolfRig/Root/Pelvis/Spine/Chest/Neck/Head/Ear.L scale=(1.00, 1.00, 1.00) pos=(0.11, 0.10, -0.10)
+NODE WolfRig/Root/Pelvis/Spine/Chest/Neck/Head/Ear.R scale=(1.00, 1.00, 1.00) pos=(-0.11, 0.10, -0.10)
+NODE WolfRig/Root/Pelvis/Spine/Chest/Neck/Head/Jaw scale=(1.00, 1.00, 1.00) pos=(0.00, 0.11, 0.15)
+NODE WolfRig/Root/Pelvis/TailBase scale=(1.00, 1.00, 1.00) pos=(0.00, -0.04, -0.05)
+NODE WolfRig/Root/Pelvis/TailBase/TailMid scale=(1.00, 1.00, 1.00) pos=(0.00, 0.27, 0.00)
+NODE WolfRig/Root/Pelvis/TailBase/TailMid/TailTip scale=(1.00, 1.00, 1.00) pos=(0.00, 0.28, 0.00)
+NODE WolfSkin scale=(1.00, 1.00, 1.00) pos=(0.00, 0.00, 0.00)
+CLIP Recovery
+WolfRig m_LocalRotation.x keys=53 min=-0,7071068 max=-0,7071068
+WolfRig m_LocalRotation.y keys=53 min=0 max=0
+WolfRig m_LocalRotation.z keys=53 min=0 max=0
+WolfRig m_LocalRotation.w keys=53 min=0,7071067 max=0,7071067
+WolfRig/Root m_LocalRotation.x keys=53 min=0,7071068 max=0,7071068
+WolfRig/Root m_LocalRotation.y keys=53 min=0 max=0
+WolfRig/Root m_LocalRotation.z keys=53 min=0 max=0
+WolfRig/Root m_LocalRotation.w keys=53 min=0,7071067 max=0,7071067
+WolfRig/Root/Pelvis m_LocalRotation.x keys=53 min=0,5001388 max=0,5001388
+WolfRig/Root/Pelvis m_LocalRotation.y keys=53 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.z keys=53 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.w keys=53 min=0,8659453 max=0,8659453
+WolfRig/Root/Pelvis/Spine m_LocalRotation.x keys=53 min=0,2120865 max=0,2120865
+WolfRig/Root/Pelvis/Spine m_LocalRotation.y keys=53 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.z keys=53 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.w keys=53 min=0,9772509 max=0,9772509
+SAMPLED_VERTICES_DELTA 0
+CLIP Run
+WolfRig m_LocalRotation.x keys=25 min=-0,7071068 max=-0,7071068
+WolfRig m_LocalRotation.y keys=25 min=0 max=0
+WolfRig m_LocalRotation.z keys=25 min=0 max=0
+WolfRig m_LocalRotation.w keys=25 min=0,7071067 max=0,7071067
+WolfRig/Root m_LocalRotation.x keys=25 min=0,7071068 max=0,7071068
+WolfRig/Root m_LocalRotation.y keys=25 min=0 max=0
+WolfRig/Root m_LocalRotation.z keys=25 min=0 max=0
+WolfRig/Root m_LocalRotation.w keys=25 min=0,7071067 max=0,7071067
+WolfRig/Root/Pelvis m_LocalRotation.x keys=25 min=0,5001388 max=0,5001388
+WolfRig/Root/Pelvis m_LocalRotation.y keys=25 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.z keys=25 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.w keys=25 min=0,8659453 max=0,8659453
+WolfRig/Root/Pelvis/Spine m_LocalRotation.x keys=25 min=0,1992765 max=0,2248602
+WolfRig/Root/Pelvis/Spine m_LocalRotation.y keys=25 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.z keys=25 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.w keys=25 min=0,974391 max=0,9799433
+SAMPLED_VERTICES_DELTA 0,3693981
+CLIP Death
+WolfRig m_LocalRotation.x keys=61 min=-0,7071068 max=-0,7071068
+WolfRig m_LocalRotation.y keys=61 min=0 max=0
+WolfRig m_LocalRotation.z keys=61 min=0 max=0
+WolfRig m_LocalRotation.w keys=61 min=0,7071067 max=0,7071067
+WolfRig/Root m_LocalRotation.x keys=61 min=0,5495253 max=0,7071068
+WolfRig/Root m_LocalRotation.y keys=61 min=-0,4449967 max=0
+WolfRig/Root m_LocalRotation.z keys=61 min=0 max=0,4449969
+WolfRig/Root m_LocalRotation.w keys=61 min=0,549525 max=0,7071067
+WolfRig/Root/Pelvis m_LocalRotation.x keys=61 min=0,5001388 max=0,5001388
+WolfRig/Root/Pelvis m_LocalRotation.y keys=61 min=-8,603978E-09 max=8,603985E-09
+WolfRig/Root/Pelvis m_LocalRotation.z keys=61 min=-8,603982E-09 max=8,603982E-09
+WolfRig/Root/Pelvis m_LocalRotation.w keys=61 min=0,8659453 max=0,8659453
+WolfRig/Root/Pelvis/Spine m_LocalRotation.x keys=61 min=0,2120865 max=0,2120865
+WolfRig/Root/Pelvis/Spine m_LocalRotation.y keys=61 min=-2,250719E-08 max=2,323688E-08
+WolfRig/Root/Pelvis/Spine m_LocalRotation.z keys=61 min=-3,794503E-09 max=5,717996E-09
+WolfRig/Root/Pelvis/Spine m_LocalRotation.w keys=61 min=0,9772509 max=0,9772509
+SAMPLED_VERTICES_DELTA 0,2140729
+CLIP Windup
+WolfRig m_LocalRotation.x keys=29 min=-0,7071068 max=-0,7071068
+WolfRig m_LocalRotation.y keys=29 min=0 max=0
+WolfRig m_LocalRotation.z keys=29 min=0 max=0
+WolfRig m_LocalRotation.w keys=29 min=0,7071067 max=0,7071067
+WolfRig/Root m_LocalRotation.x keys=29 min=0,7071068 max=0,7071068
+WolfRig/Root m_LocalRotation.y keys=29 min=0 max=0
+WolfRig/Root m_LocalRotation.z keys=29 min=0 max=0
+WolfRig/Root m_LocalRotation.w keys=29 min=0,7071067 max=0,7071067
+WolfRig/Root/Pelvis m_LocalRotation.x keys=29 min=0,5001388 max=0,5001388
+WolfRig/Root/Pelvis m_LocalRotation.y keys=29 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.z keys=29 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.w keys=29 min=0,8659453 max=0,8659453
+WolfRig/Root/Pelvis/Spine m_LocalRotation.x keys=29 min=0,2120865 max=0,2120865
+WolfRig/Root/Pelvis/Spine m_LocalRotation.y keys=29 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.z keys=29 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.w keys=29 min=0,9772509 max=0,9772509
+SAMPLED_VERTICES_DELTA 0,1671022
+CLIP Bite
+WolfRig m_LocalRotation.x keys=13 min=-0,7071068 max=-0,7071068
+WolfRig m_LocalRotation.y keys=13 min=0 max=0
+WolfRig m_LocalRotation.z keys=13 min=0 max=0
+WolfRig m_LocalRotation.w keys=13 min=0,7071067 max=0,7071067
+WolfRig/Root m_LocalRotation.x keys=13 min=0,7071068 max=0,7071068
+WolfRig/Root m_LocalRotation.y keys=13 min=0 max=0
+WolfRig/Root m_LocalRotation.z keys=13 min=0 max=0
+WolfRig/Root m_LocalRotation.w keys=13 min=0,7071067 max=0,7071067
+WolfRig/Root/Pelvis m_LocalRotation.x keys=13 min=0,5001388 max=0,5001388
+WolfRig/Root/Pelvis m_LocalRotation.y keys=13 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.z keys=13 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.w keys=13 min=0,8659453 max=0,8659453
+WolfRig/Root/Pelvis/Spine m_LocalRotation.x keys=13 min=0,2120865 max=0,2120865
+WolfRig/Root/Pelvis/Spine m_LocalRotation.y keys=13 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.z keys=13 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.w keys=13 min=0,9772509 max=0,9772509
+SAMPLED_VERTICES_DELTA 0,3279873
+CLIP Idle
+WolfRig m_LocalRotation.x keys=121 min=-0,7071068 max=-0,7071068
+WolfRig m_LocalRotation.y keys=121 min=0 max=0
+WolfRig m_LocalRotation.z keys=121 min=0 max=0
+WolfRig m_LocalRotation.w keys=121 min=0,7071067 max=0,7071067
+WolfRig/Root m_LocalRotation.x keys=121 min=0,7071068 max=0,7071068
+WolfRig/Root m_LocalRotation.y keys=121 min=0 max=0
+WolfRig/Root m_LocalRotation.z keys=121 min=0 max=0
+WolfRig/Root m_LocalRotation.w keys=121 min=0,7071067 max=0,7071067
+WolfRig/Root/Pelvis m_LocalRotation.x keys=121 min=0,5001388 max=0,5001388
+WolfRig/Root/Pelvis m_LocalRotation.y keys=121 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.z keys=121 min=0 max=0
+WolfRig/Root/Pelvis m_LocalRotation.w keys=121 min=0,8659453 max=0,8659453
+WolfRig/Root/Pelvis/Spine m_LocalRotation.x keys=121 min=0,2120865 max=0,2120865
+WolfRig/Root/Pelvis/Spine m_LocalRotation.y keys=121 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.z keys=121 min=0 max=0
+WolfRig/Root/Pelvis/Spine m_LocalRotation.w keys=121 min=0,9772509 max=0,9772509
+SAMPLED_VERTICES_DELTA 0,01593491
