@@ -39,6 +39,28 @@ public sealed class WolfVisualTests
     }
 
     [UnityTest]
+    public IEnumerator CapturePolishedGaitAndAttackInRealUrp()
+    {
+        if(SystemInfo.graphicsDeviceType==GraphicsDeviceType.Null)Assert.Ignore("Real graphics required.");
+        visual.enabled=false;
+        player.transform.position=new Vector3(0,.08f,6);
+        var animator=ai.GetComponentInChildren<Animator>();animator.speed=0;
+        var camera=Camera.main;camera.GetComponent<AethelIsometricCamera>().enabled=false;
+        camera.orthographicSize=1.05f;
+        camera.transform.position=ai.transform.position+new Vector3(3,1.05f,.1f);
+        camera.transform.LookAt(ai.transform.position+new Vector3(0,.45f,.1f));
+        foreach(string state in new[]{"Run","Windup","Bite","Recovery"}) {
+            int steps=state=="Run"?8:4;
+            for(int i=0;i<steps;i++) {
+                animator.Play(state,0,(float)i/(state=="Run"?steps:steps-1));animator.Update(0);
+                yield return null;
+                Capture("polish-"+state.ToLowerInvariant()+"-"+i+".png");
+            }
+        }
+        Assert.AreEqual(100,life.Current,"Presentation sampling cannot apply damage.");
+    }
+
+    [UnityTest]
     public IEnumerator SkeletonRunsTelegraphsContactsRecoversAndDies()
     {
         player.transform.position=new Vector3(0,.08f,5); Physics.SyncTransforms(); ai.enabled=true;

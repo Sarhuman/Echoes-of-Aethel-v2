@@ -36,7 +36,7 @@ ModelImporter:
       takeName: WolfRig|Bite
       internalID: -3763426555907664968
       firstFrame: 0
-      lastFrame: 6
+      lastFrame: 12
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -65,7 +65,7 @@ ModelImporter:
       takeName: WolfRig|Death
       internalID: 8415499951935863104
       firstFrame: 0
-      lastFrame: 30
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -94,7 +94,7 @@ ModelImporter:
       takeName: WolfRig|Idle
       internalID: -761125359877721889
       firstFrame: 0
-      lastFrame: 60
+      lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -123,7 +123,7 @@ ModelImporter:
       takeName: WolfRig|Recovery
       internalID: 4081920594038300705
       firstFrame: 0
-      lastFrame: 26
+      lastFrame: 52
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -152,7 +152,7 @@ ModelImporter:
       takeName: WolfRig|Run
       internalID: 7477457935004871417
       firstFrame: 0
-      lastFrame: 14
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -181,7 +181,7 @@ ModelImporter:
       takeName: WolfRig|Windup
       internalID: -4606805204334885058
       firstFrame: 0
-      lastFrame: 14
+      lastFrame: 28
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

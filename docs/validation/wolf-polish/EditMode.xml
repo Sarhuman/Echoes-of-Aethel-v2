@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="24" result="Passed" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0,7087221">
+  <test-suite type="TestSuite" id="1000" name="Echoes of Aethel v2" fullname="Echoes of Aethel v2" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.708722" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1031" name="EchoesOfAethel.EditModeTests.dll" fullname="C:/Users/Sarumano/Documents/ChatGPT/Echoes of Aethel/Echoes-of-Aethel-v2/Library/ScriptAssemblies/EchoesOfAethel.EditModeTests.dll" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.694054" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="41160" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="ImportedArtTests" fullname="ImportedArtTests" classname="ImportedArtTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.137297" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1002" name="BastiaoHasValidRigAndSocketsWithoutMovingDamageOriginOntoBones" fullname="ImportedArtTests.BastiaoHasValidRigAndSocketsWithoutMovingDamageOriginOntoBones" methodname="BastiaoHasValidRigAndSocketsWithoutMovingDamageOriginOntoBones" classname="ImportedArtTests" runstate="Runnable" seed="77162135" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.060192" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1015" name="EnvironmentHasSeparateCollisionAndTexturedVisual" fullname="ImportedArtTests.EnvironmentHasSeparateCollisionAndTexturedVisual" classname="ImportedArtTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.038628" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1011" name="EnvironmentHasSeparateCollisionAndTexturedVisual(&quot;PF_BosqueArvore_01&quot;)" fullname="ImportedArtTests.EnvironmentHasSeparateCollisionAndTexturedVisual(&quot;PF_BosqueArvore_01&quot;)" methodname="EnvironmentHasSeparateCollisionAndTexturedVisual" classname="ImportedArtTests" runstate="Runnable" seed="1631406430" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.012269" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1012" name="EnvironmentHasSeparateCollisionAndTexturedVisual(&quot;PF_BosqueRocha_01&quot;)" fullname="ImportedArtTests.EnvironmentHasSeparateCollisionAndTexturedVisual(&quot;PF_BosqueRocha_01&quot;)" methodname="EnvironmentHasSeparateCollisionAndTexturedVisual" classname="ImportedArtTests" runstate="Runnable" seed="1662924201" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.007309" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1013" name="EnvironmentHasSeparateCollisionAndTexturedVisual(&quot;PF_BosquePilar_01&quot;)" fullname="ImportedArtTests.EnvironmentHasSeparateCollisionAndTexturedVisual(&quot;PF_BosquePilar_01&quot;)" methodname="EnvironmentHasSeparateCollisionAndTexturedVisual" classname="ImportedArtTests" runstate="Runnable" seed="867949642" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.007753" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1014" name="EnvironmentHasSeparateCollisionAndTexturedVisual(&quot;PF_BosquePiso_01&quot;)" fullname="ImportedArtTests.EnvironmentHasSeparateCollisionAndTexturedVisual(&quot;PF_BosquePiso_01&quot;)" methodname="EnvironmentHasSeparateCollisionAndTexturedVisual" classname="ImportedArtTests" runstate="Runnable" seed="1958573187" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.006985" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1010" name="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics" fullname="ImportedArtTests.RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics" classname="ImportedArtTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.015096" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1003" name="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Escudo&quot;,5100)" fullname="ImportedArtTests.RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Escudo&quot;,5100)" methodname="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics" classname="ImportedArtTests" runstate="Runnable" seed="1311762117" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.009674" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1004" name="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Arvore&quot;,15100)" fullname="ImportedArtTests.RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Arvore&quot;,15100)" methodname="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics" classname="ImportedArtTests" runstate="Runnable" seed="1465555087" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.000548" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1005" name="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Rocha&quot;,6100)" fullname="ImportedArtTests.RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Rocha&quot;,6100)" methodname="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics" classname="ImportedArtTests" runstate="Runnable" seed="1276789552" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.000334" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1006" name="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Pilar&quot;,8100)" fullname="ImportedArtTests.RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Pilar&quot;,8100)" methodname="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics" classname="ImportedArtTests" runstate="Runnable" seed="662929884" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.000326" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1007" name="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Piso&quot;,4100)" fullname="ImportedArtTests.RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Piso&quot;,4100)" methodname="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics" classname="ImportedArtTests" runstate="Runnable" seed="170968110" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.000325" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1008" name="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;LoboEtereo&quot;,5200)" fullname="ImportedArtTests.RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;LoboEtereo&quot;,5200)" methodname="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics" classname="ImportedArtTests" runstate="Runnable" seed="975596427" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.001801" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1009" name="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Machado&quot;,3200)" fullname="ImportedArtTests.RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics(&quot;Machado&quot;,3200)" methodname="RuntimeModelsRespectTriangleBudgetsAndIntroduceNoPhysics" classname="ImportedArtTests" runstate="Runnable" seed="1084358948" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.000333" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+      </test-suite>
+      <test-suite type="TestFixture" id="1016" name="SavedArenaTests" fullname="SavedArenaTests" classname="SavedArenaTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.256800" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="ParameterizedMethod" id="1021" name="CharacterPrefabsPreserveIntegrationContract" fullname="SavedArenaTests.CharacterPrefabsPreserveIntegrationContract" classname="SavedArenaTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.011941" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1019" name="CharacterPrefabsPreserveIntegrationContract(&quot;PF_Bastiao&quot;,True)" fullname="SavedArenaTests.CharacterPrefabsPreserveIntegrationContract(&quot;PF_Bastiao&quot;,True)" methodname="CharacterPrefabsPreserveIntegrationContract" classname="SavedArenaTests" runstate="Runnable" seed="1787723424" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.003293" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1020" name="CharacterPrefabsPreserveIntegrationContract(&quot;PF_LoboEtereo&quot;,False)" fullname="SavedArenaTests.CharacterPrefabsPreserveIntegrationContract(&quot;PF_LoboEtereo&quot;,False)" methodname="CharacterPrefabsPreserveIntegrationContract" classname="SavedArenaTests" runstate="Runnable" seed="1331675186" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.008025" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-case id="1018" name="InitialCreatorRefusesToChangeExistingSceneAndPrefabs" fullname="SavedArenaTests.InitialCreatorRefusesToChangeExistingSceneAndPrefabs" methodname="InitialCreatorRefusesToChangeExistingSceneAndPrefabs" classname="SavedArenaTests" runstate="Runnable" seed="1875331434" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.120676" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[AETHEL_SCENE_PROTECTED: existing arena was not overwritten.
+]]></output>
+        </test-case>
+        <test-case id="1017" name="SavedArenaOpensWithValidReferences" fullname="SavedArenaTests.SavedArenaOpensWithValidReferences" methodname="SavedArenaOpensWithValidReferences" classname="SavedArenaTests" runstate="Runnable" seed="435888053" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.120668" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[AETHEL_SAVED_ARENA_VALIDATED
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1022" name="WolfRigTests" fullname="WolfRigTests" classname="WolfRigTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.297979" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1024" name="AttackSolesStayPlantedAndContactReturnHaveContinuousSkin" fullname="WolfRigTests.AttackSolesStayPlantedAndContactReturnHaveContinuousSkin" methodname="AttackSolesStayPlantedAndContactReturnHaveContinuousSkin" classname="WolfRigTests" runstate="Runnable" seed="76972872" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.180592" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1026" name="IdleFeetRemainAtStableVisualOrigin" fullname="WolfRigTests.IdleFeetRemainAtStableVisualOrigin" methodname="IdleFeetRemainAtStableVisualOrigin" classname="WolfRigTests" runstate="Runnable" seed="2038322609" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.007938" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1028" name="LegacyStaticFitRefusesToRewriteRiggedWolf" fullname="WolfRigTests.LegacyStaticFitRefusesToRewriteRiggedWolf" methodname="LegacyStaticFitRefusesToRewriteRiggedWolf" classname="WolfRigTests" runstate="Runnable" seed="399013898" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.022998" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1025" name="RepeatingInitialIntegrationRefusesBeforeEditingAssets" fullname="WolfRigTests.RepeatingInitialIntegrationRefusesBeforeEditingAssets" methodname="RepeatingInitialIntegrationRefusesBeforeEditingAssets" classname="WolfRigTests" runstate="Runnable" seed="235732043" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.042061" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1023" name="RunningSolesTrackThreeMetresPerSecondDuringDiagonalSupport" fullname="WolfRigTests.RunningSolesTrackThreeMetresPerSecondDuringDiagonalSupport" methodname="RunningSolesTrackThreeMetresPerSecondDuringDiagonalSupport" classname="WolfRigTests" runstate="Runnable" seed="820240240" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.009409" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1027" name="SourceRigImportsAtCanonicalScaleBeforePrefabFitting" fullname="WolfRigTests.SourceRigImportsAtCanonicalScaleBeforePrefabFitting" methodname="SourceRigImportsAtCanonicalScaleBeforePrefabFitting" classname="WolfRigTests" runstate="Runnable" seed="662639716" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.008375" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1030" name="TelegraphAndRigKeepDamageOriginAndPhysicsOnStableShell" fullname="WolfRigTests.TelegraphAndRigKeepDamageOriginAndPhysicsOnStableShell" methodname="TelegraphAndRigKeepDamageOriginAndPhysicsOnStableShell" classname="WolfRigTests" runstate="Runnable" seed="1987612777" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.001717" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1029" name="WolfHasSkinnedGenericRigAndSixClipsWithoutDamageEvents" fullname="WolfRigTests.WolfHasSkinnedGenericRigAndSixClipsWithoutDamageEvents" methodname="WolfHasSkinnedGenericRigAndSixClipsWithoutDamageEvents" classname="WolfRigTests" runstate="Runnable" seed="2126341990" result="Passed" start-time="2026-10-19 21:38:12Z" end-time="2026-10-19 21:38:12Z" duration="0.019590" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:/Users/Sarumano/AppData/LocalLow/Sarhuman/Echoes of Aethel v2\TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

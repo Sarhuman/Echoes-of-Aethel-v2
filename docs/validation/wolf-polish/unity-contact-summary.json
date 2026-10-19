@@ -1,0 +1,10 @@
+{
+  "samples": 204,
+  "max_attack_sole_displacement_metres": 0.0003935250944984322,
+  "sampled_in_Unity_6000_6_6f1": true,
+  "gates_metres": {
+    "attack_sole_displacement": 0.008,
+    "run_support_frame_error": 0.012,
+    "skin_seam": 0.002
+  }
+}
