@@ -1,0 +1,35 @@
+Model: Assets/Art/Models/Exported/Meshy_AI_knight_rigged_biped_Animation_Walking_frame_rate_30.fbx
+Rig: Human
+Scale: 1
+Bounds center: (-0.0044, 0.8717, 0.1071)
+Bounds size: (1.6718, 2.4023, 1.4785)
+Avatar valid/human: True/True
+Node:  | pos (0.0000, 0.0000, 0.0000)
+Node: Armature | pos (0.0000, 0.0000, 0.0000)
+Node: Armature/Hips | pos (-0.0069, 1.0228, 0.1130)
+Node: Armature/Hips/LeftUpLeg | pos (-0.1683, 0.9226, 0.1041)
+Node: Armature/Hips/LeftUpLeg/LeftLeg | pos (-0.2612, 0.5545, 0.2470)
+Node: Armature/Hips/LeftUpLeg/LeftLeg/LeftFoot | pos (-0.2485, 0.2454, -0.0250)
+Node: Armature/Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToeBase | pos (-0.2669, 0.0678, 0.0229)
+Node: Armature/Hips/RightUpLeg | pos (0.1609, 0.9256, 0.1158)
+Node: Armature/Hips/RightUpLeg/RightLeg | pos (0.2059, 0.5332, 0.1780)
+Node: Armature/Hips/RightUpLeg/RightLeg/RightFoot | pos (0.2439, 0.1505, 0.0295)
+Node: Armature/Hips/RightUpLeg/RightLeg/RightFoot/RightToeBase | pos (0.2700, 0.0182, 0.1640)
+Node: Armature/Hips/Spine02 | pos (-0.0066, 1.1482, 0.1084)
+Node: Armature/Hips/Spine02/Spine01 | pos (-0.0055, 1.2737, 0.1114)
+Node: Armature/Hips/Spine02/Spine01/Spine | pos (-0.0026, 1.3990, 0.1188)
+Node: Armature/Hips/Spine02/Spine01/Spine/LeftShoulder | pos (-0.0546, 1.4599, 0.1110)
+Node: Armature/Hips/Spine02/Spine01/Spine/LeftShoulder/LeftArm | pos (-0.2551, 1.3996, 0.1267)
+Node: Armature/Hips/Spine02/Spine01/Spine/LeftShoulder/LeftArm/LeftForeArm | pos (-0.3889, 1.1489, 0.0622)
+Node: Armature/Hips/Spine02/Spine01/Spine/LeftShoulder/LeftArm/LeftForeArm/LeftHand | pos (-0.5271, 0.8840, 0.0991)
+Node: Armature/Hips/Spine02/Spine01/Spine/neck | pos (0.0001, 1.4859, 0.1192)
+Node: Armature/Hips/Spine02/Spine01/Spine/neck/Head | pos (0.0029, 1.5602, 0.1184)
+Node: Armature/Hips/Spine02/Spine01/Spine/neck/Head/head_end | pos (0.0063, 1.7975, 0.1602)
+Node: Armature/Hips/Spine02/Spine01/Spine/neck/Head/headfront | pos (-0.0029, 1.5538, 0.2586)
+Node: Armature/Hips/Spine02/Spine01/Spine/RightShoulder | pos (0.0498, 1.4620, 0.1035)
+Node: Armature/Hips/Spine02/Spine01/Spine/RightShoulder/RightArm | pos (0.2466, 1.3982, 0.0679)
+Node: Armature/Hips/Spine02/Spine01/Spine/RightShoulder/RightArm/RightForeArm | pos (0.3747, 1.1448, 0.0236)
+Node: Armature/Hips/Spine02/Spine01/Spine/RightShoulder/RightArm/RightForeArm/RightHand | pos (0.5082, 0.8974, 0.1431)
+Node: char1 | pos (0.0000, 0.0000, 0.0000)
+Mesh: char1 | vertices 19923 | triangles 10335 | bones 24
+Clip: Walking | duration 1,033333 | fps 30

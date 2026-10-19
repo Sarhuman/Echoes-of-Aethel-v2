@@ -22,9 +22,20 @@ public sealed class SavedArenaRuntimeTests
         Assert.IsNotNull(player.CameraTransform);
         if (SystemInfo.graphicsDeviceType != GraphicsDeviceType.Null)
         {
-            Directory.CreateDirectory("docs/validation");
-            const string path = "docs/validation/arena-runtime.png";
-            if (File.Exists(path)) File.Delete(path);
+            Directory.CreateDirectory("TestResults");
+            Capture("TestResults/arena-runtime.png");
+            // Diagnostic close-up of the same running scene; no scene/prefab is saved.
+            var follow=Camera.main.GetComponent<AethelIsometricCamera>(); follow.enabled=false;
+            Camera.main.transform.position=player.transform.position+new Vector3(3,2.8f,-4);
+            Camera.main.transform.LookAt(player.transform.position+Vector3.up);
+            Camera.main.orthographicSize=1.6f;
+            Capture("TestResults/bastiao-runtime.png");
+        }
+    }
+
+    private static void Capture(string path)
+    {
+            if(File.Exists(path))File.Delete(path);
             // Explicitly render the actual playing camera; batch mode has no GameView presentation frame.
             var target = new RenderTexture(1920, 1080, 24);
             target.Create();
@@ -38,6 +49,5 @@ public sealed class SavedArenaRuntimeTests
             RenderTexture.active = previous;
             target.Release(); Object.Destroy(target); Object.Destroy(image);
             Assert.IsTrue(File.Exists(path), "Runtime capture was not written.");
-        }
     }
 }

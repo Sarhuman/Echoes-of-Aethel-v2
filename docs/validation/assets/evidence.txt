@@ -1,0 +1,23 @@
+Unity 6000.6.6f1 / URP 17.6.0 / Windows x64 Mono D3D11
+EditMode: 16/16 Passed; PlayMode: 9/9 Passed
+OUTER_SNAPSHOT_UNCHANGED files=117 after build/runtime/reopen
+[assets-configure.log]
+AETHEL_BASTIAO_AUDIT (1.6718, 2.4023, 1.4785)
+AETHEL_ASSET_IMPORTS_VALIDATED
+Exiting batchmode successfully now!
+[assets-integrate.log]
+AETHEL_ASSET_PREFABS_INTEGRATED_SCENE_UNCHANGED
+Exiting batchmode successfully now!
+[assets-fit.log]
+AETHEL_REVIEWED_VISUAL_FIT_APPLIED
+Exiting batchmode successfully now!
+[assets-build.log]
+AETHEL_SAVED_ARENA_VALIDATED
+AETHEL_WINDOWS_BUILD_PASSED; scene/prefab/meta SHA256 unchanged; 189330986 bytes
+Exiting batchmode successfully now!
+[assets-windows-runtime.log]
+AETHEL_SMOKE_HARDWARE: Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz; AMD Radeon RX 580 2048SP; RAM=16224MB
+AETHEL_BUILD_SMOKE_PASSED
+[assets-reopen.log]
+AETHEL_SAVED_ARENA_VALIDATED
+Exiting batchmode successfully now!

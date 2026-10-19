@@ -1,0 +1,80 @@
+{
+  "baseline": "f30860423dde6888db23d9c6da7faf897c9e236b",
+  "checks": [
+    {
+      "path": "Assets/Prefabs/Characters/PF_Bastiao.prefab",
+      "file_id": "8068472410507706347",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_Bastiao.prefab",
+      "file_id": "6468211767177065175",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_Bastiao.prefab",
+      "file_id": "2450157027596280281",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_LoboEtereo.prefab",
+      "file_id": "2480947669392013457",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_LoboEtereo.prefab",
+      "file_id": "9211610995387150104",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Characters/PF_LoboEtereo.prefab",
+      "file_id": "8599776830722674748",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Environment/PF_BosqueArvore_01.prefab",
+      "file_id": "7441561121873338723",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Environment/PF_BosquePilar_01.prefab",
+      "file_id": "3032014619127659406",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Prefabs/Environment/PF_BosqueRocha_01.prefab",
+      "file_id": "7782435846346734172",
+      "preserved": true
+    },
+    {
+      "path": "Assets/Scenes/Aethel_FirstArena.unity",
+      "preserved": true,
+      "sha256": "71ed2d672cbec1b453b07762e7655f04d5d97658ed7c0b7697de418e92747fa8"
+    },
+    {
+      "path": "Assets/Scripts/Runtime/AethelPlayerController.cs",
+      "preserved": true,
+      "sha256": "21b1d0e9c207ff1ca3d06c9997bd3283e5aa84c6c6b797c555347e7ac787d9c6"
+    },
+    {
+      "path": "Assets/Scripts/Runtime/AethelHealth.cs",
+      "preserved": true,
+      "sha256": "c517ef9180b01dfb021586bc4e3c037473ded25001e6c198a80f1353b5fdc62f"
+    },
+    {
+      "path": "Assets/Scripts/Runtime/AethelWolfAI.cs",
+      "preserved": true,
+      "sha256": "fd8c3baf0c3139a4cfa95d956b5c8cd6d4ad117197b75b445256c189b10d3fb8"
+    },
+    {
+      "path": "Assets/Scripts/Runtime/AethelIsometricCamera.cs",
+      "preserved": true,
+      "sha256": "6cc102f02b2186bc309799dbfef45fcd5d0476fec21578df58843559febc55aa"
+    },
+    {
+      "path": "Assets/Editor/AethelFirstArenaCreator.cs",
+      "preserved": true,
+      "sha256": "385bbea1e99c806cb901cf78eedf710aebe8f97d2645554673f3132949c148dd"
+    }
+  ]
+}

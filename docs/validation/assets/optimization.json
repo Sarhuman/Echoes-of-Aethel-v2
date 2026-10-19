@@ -1,0 +1,52 @@
+[
+  {
+    "asset": "Escudo",
+    "source_triangles": 480820,
+    "runtime_triangles": 5000,
+    "budget": 5000,
+    "uv_layers": [
+      1
+    ],
+    "tool": "4.5.9 LTS"
+  },
+  {
+    "asset": "Arvore",
+    "source_triangles": 2969798,
+    "runtime_triangles": 15000,
+    "budget": 15000,
+    "uv_layers": [
+      1
+    ],
+    "tool": "4.5.9 LTS"
+  },
+  {
+    "asset": "Rocha",
+    "source_triangles": 1789096,
+    "runtime_triangles": 6000,
+    "budget": 6000,
+    "uv_layers": [
+      1
+    ],
+    "tool": "4.5.9 LTS"
+  },
+  {
+    "asset": "Pilar",
+    "source_triangles": 1863748,
+    "runtime_triangles": 8000,
+    "budget": 8000,
+    "uv_layers": [
+      1
+    ],
+    "tool": "4.5.9 LTS"
+  },
+  {
+    "asset": "Piso",
+    "source_triangles": 797182,
+    "runtime_triangles": 3998,
+    "budget": 4000,
+    "uv_layers": [
+      1
+    ],
+    "tool": "4.5.9 LTS"
+  }
+]

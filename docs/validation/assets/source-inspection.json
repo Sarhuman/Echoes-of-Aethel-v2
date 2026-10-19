@@ -1,0 +1,90 @@
+[
+  {
+    "asset": "Bastiao",
+    "archive": "Meshy_AI_knight_rigged_biped(1).zip",
+    "archive_sha256": "52a6b2105b8ac9997e7a434cbd25aa748f311717f7b01b4390b122c0014f2cee",
+    "fbx_sha256": "fec8d75f7e5f8a986c1f3930d88b47189fd30a5dd85eba7e06b14f91c2cf30bf",
+    "fbx_bytes": 20034748,
+    "vertices": 5135,
+    "triangles": 10335,
+    "meshes": 1,
+    "animation_stacks": 1
+  },
+  {
+    "asset": "LoboEtereo",
+    "archive": "Meshy_AI_mystic_wolf_5k_1019124205_texture_fbx.zip",
+    "archive_sha256": "8482c80e3a8011b9632615d020b02fd44f57a44104a5fe26a45fd0a0ef0042fa",
+    "fbx_sha256": "e4fea772ba883f9d5dd5ddff416caa2e278eaa6689f17cb43707567be7219044",
+    "fbx_bytes": 22343084,
+    "vertices": 2590,
+    "triangles": 5164,
+    "meshes": 1,
+    "animation_stacks": 0
+  },
+  {
+    "asset": "Machado",
+    "archive": "Meshy_AI_battle_axe_3k_1019121451_texture_fbx.zip",
+    "archive_sha256": "80cc2c3577c543f9abba75b17e9a0326d562880d2aead3c3f74a30b4dea2157c",
+    "fbx_sha256": "10d45ed4e8375a02b9cc5b2744e9312d18c986f066b4f39d56d705157db274ad",
+    "fbx_bytes": 23442988,
+    "vertices": 1569,
+    "triangles": 3131,
+    "meshes": 1,
+    "animation_stacks": 0
+  },
+  {
+    "asset": "Escudo",
+    "archive": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_fbx.zip",
+    "archive_sha256": "b12e6d97efef4c6ec8d18ad06ad1fc5f39d1efd5bbfa25dcf2d5297a80f6ac66",
+    "fbx_sha256": "f16adceeaf1b9bd0e06eefda4b3aac5cb647d0f0e463975950156c0e7537b9d4",
+    "fbx_bytes": 38347020,
+    "vertices": 240368,
+    "triangles": 480820,
+    "meshes": 1,
+    "animation_stacks": 0
+  },
+  {
+    "asset": "Arvore",
+    "archive": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_fbx.zip",
+    "archive_sha256": "4f05e20ea726e0c78d60e29cf90ed5fcc295a342e216e7d00b706f160779bcd9",
+    "fbx_sha256": "ddd80357bc65735cc1aef418c5d1f5bf1f6122db9691c87073dd182a124ea8aa",
+    "fbx_bytes": 143503724,
+    "vertices": 1484077,
+    "triangles": 2969798,
+    "meshes": 1,
+    "animation_stacks": 0
+  },
+  {
+    "asset": "Rocha",
+    "archive": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_fbx.zip",
+    "archive_sha256": "114f557fd78891aab0dc8e55d4819d41496a38f87856fc1ff194073e6fb23558",
+    "fbx_sha256": "d1d162f750c3bb15e2ba8a78e12d379106684c5aeb8e515e31b65d31b8d7bdc8",
+    "fbx_bytes": 93703964,
+    "vertices": 894312,
+    "triangles": 1789096,
+    "meshes": 1,
+    "animation_stacks": 0
+  },
+  {
+    "asset": "Pilar",
+    "archive": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_fbx.zip",
+    "archive_sha256": "af61f7664800e83ce273afc8a90ac79f3bf3253845a059e6b4699f558c90de89",
+    "fbx_sha256": "8876084e0b471899b8280d1650cb91fc830e98030d03e201df536753396eff47",
+    "fbx_bytes": 101021724,
+    "vertices": 931678,
+    "triangles": 1863748,
+    "meshes": 1,
+    "animation_stacks": 0
+  },
+  {
+    "asset": "Piso",
+    "archive": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_fbx.zip",
+    "archive_sha256": "99c78beae4cc2699f0e3b0dc3a42e221750ff58a45866dff7a22a3f3c970b333",
+    "fbx_sha256": "52812d6126be4ef4dd6c01b6f51bc6dcd9ec888e0f6011526990342c2b85ec62",
+    "fbx_bytes": 55611996,
+    "vertices": 398483,
+    "triangles": 797182,
+    "meshes": 1,
+    "animation_stacks": 0
+  }
+]

@@ -33,14 +33,15 @@ public sealed class SavedArenaTests
         Assert.IsNotNull(prefab.GetComponent<AethelHealth>());
         Assert.IsNotNull(prefab.GetComponent<AethelArtBindings>());
         var visual = prefab.transform.Find("VisualRoot"); Assert.IsNotNull(visual);
-        Assert.IsNotNull(visual.GetComponent<Animator>());
-        Assert.IsFalse(visual.GetComponent<Animator>().applyRootMotion);
+        Assert.IsNotNull(visual.GetComponentInChildren<Animator>());
+        Assert.IsFalse(visual.GetComponentInChildren<Animator>().applyRootMotion);
         Assert.IsEmpty(visual.GetComponentsInChildren<Collider>(true));
         Assert.IsNotNull(prefab.transform.Find("GroundCheck"));
         if (player)
         {
             Assert.IsNotNull(prefab.GetComponent<AethelPlayerController>());
-            Assert.IsNotNull(visual.Find("WeaponSocket")); Assert.IsNotNull(visual.Find("ShieldSocket"));
+            var names = visual.GetComponentsInChildren<Transform>(true).Select(t => t.name).ToArray();
+            CollectionAssert.Contains(names, "WeaponSocket"); CollectionAssert.Contains(names, "ShieldSocket");
             Assert.IsNotNull(visual.Find("HitOrigin"));
         }
         else { Assert.IsNotNull(prefab.GetComponent<AethelWolfAI>()); Assert.IsNotNull(visual.Find("BiteOrigin")); }
