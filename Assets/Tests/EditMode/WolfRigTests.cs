@@ -8,6 +8,57 @@ using UnityEngine;
 public sealed class WolfRigTests
 {
     [Test]
+    public void UpperFurHasNoPawOrLowerLegInfluence()
+    {
+        WithSkin((animator,skin,visual,baked)=> {
+            var points=skin.sharedMesh.vertices;var weights=skin.sharedMesh.boneWeights;
+            for(int i=0;i<points.Length;i++) {
+                var p=visual.InverseTransformPoint(skin.transform.TransformPoint(points[i]));
+                if(p.y<=.31f)continue;
+                var w=weights[i];
+                int[] bones={w.boneIndex0,w.boneIndex1,w.boneIndex2,w.boneIndex3};
+                float[] values={w.weight0,w.weight1,w.weight2,w.weight3};
+                for(int j=0;j<4;j++)if(values[j]>.00001f) {
+                    string name=skin.bones[bones[j]].name;
+                    Assert.IsFalse(name.Contains("Paw") || name.Contains("Lower"),"Upper fur vertex "+i+" follows "+name);
+                }
+            }
+        });
+    }
+
+    [Test]
+    public void ImportedHaunchAndManeStayInsideReviewedStretchLimits()
+    {
+        WithSkin((animator,skin,visual,baked)=> {
+            var rest=skin.sharedMesh.vertices.Select(p=>visual.InverseTransformPoint(skin.transform.TransformPoint(p))).ToArray();
+            var triangles=skin.sharedMesh.triangles;
+            var edges=new System.Collections.Generic.HashSet<(int,int)>();
+            for(int i=0;i<triangles.Length;i+=3)for(int j=0;j<3;j++) {
+                int a=triangles[i+j],b=triangles[i+(j+1)%3];edges.Add((Mathf.Min(a,b),Mathf.Max(a,b)));
+            }
+            var lines=new System.Collections.Generic.List<string>();
+            foreach(string name in new[]{"Run","Windup","Bite","Death"}) {
+                float haunch=0,mane=0;var clip=Clip(name);
+                for(int step=0;step<=8;step++) {
+                    clip.SampleAnimation(animator.gameObject,clip.length*step/8);skin.BakeMesh(baked);
+                    var points=baked.vertices.Select(p=>visual.InverseTransformPoint(skin.transform.TransformPoint(p))).ToArray();
+                    foreach(var edge in edges) {
+                        int a=edge.Item1,b=edge.Item2;float length=(rest[a]-rest[b]).magnitude;if(length<.001f)continue;
+                        var center=(rest[a]+rest[b])*.5f;float ratio=(points[a]-points[b]).magnitude/length;
+                        if(center.z>-.8f && center.z<-.15f && center.y>.1f)haunch=Mathf.Max(haunch,ratio);
+                        if(center.z>.35f && center.y>.18f)mane=Mathf.Max(mane,ratio);
+                    }
+                }
+                lines.Add(name+" haunchMax="+haunch.ToString("F6")+" maneMax="+mane.ToString("F6"));
+                Assert.Less(haunch,name=="Run"?3.8f:name=="Death"?2.7f:1.8f,name+" haunch");
+                Assert.Less(mane,name=="Run"?4.9f:2.5f,name+" mane");
+            }
+            System.IO.Directory.CreateDirectory("TestResults");
+            System.IO.File.WriteAllLines("TestResults/wolf-surface-stretch.txt",lines);
+        });
+    }
+
+    [Test]
     public void RunningSolesTrackThreeMetresPerSecondDuringDiagonalSupport()
     {
         WithSkin((animator,skin,visual,baked)=> {

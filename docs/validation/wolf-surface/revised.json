@@ -1,0 +1,775 @@
+{
+  "method": "Confirmed non-coplanar triangle crossings; shared-vertex pairs excluded; 9 uniform samples/clip",
+  "rest_crossings": 10,
+  "clips": {
+    "Idle": {
+      "crossings_per_sample": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "crossings_absent_in_rest_per_sample": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "regions": {
+        "haunch": {
+          "p99": 1.0145066902792217,
+          "max": 1.048406253237866,
+          "worst": {
+            "ratio": 1.048406253237866,
+            "sample": 6,
+            "vertices": [
+              2381,
+              1977
+            ],
+            "weights": [
+              {
+                "Pelvis": 0.4661,
+                "TailBase": 0.2844,
+                "TailMid": 0.1937,
+                "HindUpper.L": 0.0558
+              },
+              {
+                "Pelvis": 0.5305,
+                "HindUpper.L": 0.2037,
+                "TailBase": 0.1787,
+                "HindLower.L": 0.0872
+              }
+            ]
+          }
+        },
+        "tail": {
+          "p99": 1.0109655802587325,
+          "max": 1.066832140140676,
+          "worst": {
+            "ratio": 1.066832140140676,
+            "sample": 6,
+            "vertices": [
+              2404,
+              2484
+            ],
+            "weights": [
+              {
+                "TailMid": 0.4897,
+                "TailBase": 0.2267,
+                "TailTip": 0.2185,
+                "Pelvis": 0.0652
+              },
+              {
+                "TailMid": 0.5117,
+                "TailTip": 0.2807,
+                "TailBase": 0.1807,
+                "Pelvis": 0.0269
+              }
+            ]
+          }
+        },
+        "mane": {
+          "p99": 1.0290136829275625,
+          "max": 1.180305558655855,
+          "worst": {
+            "ratio": 1.180305558655855,
+            "sample": 2,
+            "vertices": [
+              1335,
+              1300
+            ],
+            "weights": [
+              {
+                "ForeLower.L": 0.5331,
+                "Neck": 0.2296,
+                "Chest": 0.1436,
+                "ForeUpper.L": 0.0937
+              },
+              {
+                "Neck": 0.4132,
+                "ForeUpper.L": 0.2897,
+                "Chest": 0.235,
+                "ForeLower.L": 0.0621
+              }
+            ]
+          }
+        },
+        "other": {
+          "p99": 1.0153969429177707,
+          "max": 1.0677258791167517,
+          "worst": {
+            "ratio": 1.0677258791167517,
+            "sample": 2,
+            "vertices": [
+              1340,
+              1237
+            ],
+            "weights": [
+              {
+                "ForeLower.L": 0.7449,
+                "Chest": 0.0895,
+                "ForeUpper.L": 0.0881,
+                "ForePaw.L": 0.0775
+              },
+              {
+                "ForeLower.L": 0.6418,
+                "ForePaw.L": 0.2366,
+                "ForeUpper.L": 0.0627,
+                "Chest": 0.0589
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Run": {
+      "crossings_per_sample": [
+        137,
+        133,
+        63,
+        74,
+        45,
+        39,
+        27,
+        94,
+        137
+      ],
+      "crossings_absent_in_rest_per_sample": [
+        127,
+        123,
+        53,
+        64,
+        35,
+        29,
+        17,
+        84,
+        127
+      ],
+      "regions": {
+        "haunch": {
+          "p99": 1.4826149942433975,
+          "max": 3.373733480371553,
+          "worst": {
+            "ratio": 3.373733480371553,
+            "sample": 3,
+            "vertices": [
+              2015,
+              2014
+            ],
+            "weights": [
+              {
+                "HindUpper.R": 0.5347,
+                "Spine": 0.2008,
+                "Pelvis": 0.1432,
+                "HindLower.R": 0.1213
+              },
+              {
+                "HindLower.R": 0.451,
+                "HindUpper.R": 0.2967,
+                "Spine": 0.1517,
+                "Pelvis": 0.1006
+              }
+            ]
+          }
+        },
+        "tail": {
+          "p99": 1.0166202487379008,
+          "max": 1.0546336390804094,
+          "worst": {
+            "ratio": 1.0546336390804094,
+            "sample": 6,
+            "vertices": [
+              2404,
+              2484
+            ],
+            "weights": [
+              {
+                "TailMid": 0.4897,
+                "TailBase": 0.2267,
+                "TailTip": 0.2185,
+                "Pelvis": 0.0652
+              },
+              {
+                "TailMid": 0.5117,
+                "TailTip": 0.2807,
+                "TailBase": 0.1807,
+                "Pelvis": 0.0269
+              }
+            ]
+          }
+        },
+        "mane": {
+          "p99": 1.6718161273498369,
+          "max": 4.573228671230466,
+          "worst": {
+            "ratio": 4.573228671230466,
+            "sample": 7,
+            "vertices": [
+              1308,
+              1301
+            ],
+            "weights": [
+              {
+                "Neck": 0.3786,
+                "Chest": 0.3291,
+                "ForeUpper.R": 0.2919,
+                "ForeLower.R": 0.0004
+              },
+              {
+                "Neck": 0.4329,
+                "Chest": 0.3139,
+                "ForeUpper.L": 0.2532
+              }
+            ]
+          }
+        },
+        "other": {
+          "p99": 1.4413632633045093,
+          "max": 3.7455421416214705,
+          "worst": {
+            "ratio": 3.7455421416214705,
+            "sample": 3,
+            "vertices": [
+              2011,
+              2009
+            ],
+            "weights": [
+              {
+                "HindUpper.R": 0.4903,
+                "Spine": 0.2943,
+                "Pelvis": 0.1838,
+                "HindLower.R": 0.0316
+              },
+              {
+                "HindLower.R": 0.5065,
+                "Spine": 0.2737,
+                "Pelvis": 0.1112,
+                "HindUpper.R": 0.1087
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Windup": {
+      "crossings_per_sample": [
+        10,
+        10,
+        10,
+        13,
+        18,
+        18,
+        18,
+        35,
+        44
+      ],
+      "crossings_absent_in_rest_per_sample": [
+        0,
+        0,
+        0,
+        3,
+        8,
+        8,
+        8,
+        25,
+        34
+      ],
+      "regions": {
+        "haunch": {
+          "p99": 1.0827262033792877,
+          "max": 1.3724842977808054,
+          "worst": {
+            "ratio": 1.3724842977808054,
+            "sample": 8,
+            "vertices": [
+              1795,
+              1798
+            ],
+            "weights": [
+              {
+                "Pelvis": 0.5932,
+                "HindUpper.L": 0.2084,
+                "HindUpper.R": 0.1904,
+                "HindLower.L": 0.0081
+              },
+              {
+                "Pelvis": 0.4842,
+                "HindUpper.L": 0.3381,
+                "HindUpper.R": 0.1523,
+                "HindLower.L": 0.0254
+              }
+            ]
+          }
+        },
+        "tail": {
+          "p99": 1.0209758941774392,
+          "max": 1.0839905414816038,
+          "worst": {
+            "ratio": 1.0839905414816038,
+            "sample": 7,
+            "vertices": [
+              2404,
+              2484
+            ],
+            "weights": [
+              {
+                "TailMid": 0.4897,
+                "TailBase": 0.2267,
+                "TailTip": 0.2185,
+                "Pelvis": 0.0652
+              },
+              {
+                "TailMid": 0.5117,
+                "TailTip": 0.2807,
+                "TailBase": 0.1807,
+                "Pelvis": 0.0269
+              }
+            ]
+          }
+        },
+        "mane": {
+          "p99": 1.2218258461124438,
+          "max": 2.1149164989120464,
+          "worst": {
+            "ratio": 2.1149164989120464,
+            "sample": 5,
+            "vertices": [
+              1318,
+              1277
+            ],
+            "weights": [
+              {
+                "ForeUpper.R": 0.4341,
+                "Neck": 0.3846,
+                "Chest": 0.1809,
+                "ForeLower.R": 0.0003
+              },
+              {
+                "Neck": 0.3648,
+                "ForeUpper.R": 0.2652,
+                "Head": 0.1928,
+                "Chest": 0.1772
+              }
+            ]
+          }
+        },
+        "other": {
+          "p99": 1.1614978095526844,
+          "max": 1.5436105362216723,
+          "worst": {
+            "ratio": 1.5436105362216723,
+            "sample": 5,
+            "vertices": [
+              1155,
+              1157
+            ],
+            "weights": [
+              {
+                "ForePaw.R": 0.9025,
+                "ForeLower.R": 0.0593,
+                "Neck": 0.0328,
+                "ForeUpper.R": 0.0054
+              },
+              {
+                "ForePaw.R": 0.7316,
+                "ForeLower.R": 0.1443,
+                "Neck": 0.0883,
+                "Head": 0.0358
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Bite": {
+      "crossings_per_sample": [
+        44,
+        37,
+        34,
+        27,
+        16,
+        13,
+        10,
+        10,
+        10
+      ],
+      "crossings_absent_in_rest_per_sample": [
+        34,
+        27,
+        24,
+        17,
+        6,
+        3,
+        0,
+        0,
+        0
+      ],
+      "regions": {
+        "haunch": {
+          "p99": 1.1081888832671023,
+          "max": 1.3724842977808054,
+          "worst": {
+            "ratio": 1.3724842977808054,
+            "sample": 0,
+            "vertices": [
+              1795,
+              1798
+            ],
+            "weights": [
+              {
+                "Pelvis": 0.5932,
+                "HindUpper.L": 0.2084,
+                "HindUpper.R": 0.1904,
+                "HindLower.L": 0.0081
+              },
+              {
+                "Pelvis": 0.4842,
+                "HindUpper.L": 0.3381,
+                "HindUpper.R": 0.1523,
+                "HindLower.L": 0.0254
+              }
+            ]
+          }
+        },
+        "tail": {
+          "p99": 1.0151294536910855,
+          "max": 1.0839893749262084,
+          "worst": {
+            "ratio": 1.0839893749262084,
+            "sample": 0,
+            "vertices": [
+              2404,
+              2484
+            ],
+            "weights": [
+              {
+                "TailMid": 0.4897,
+                "TailBase": 0.2267,
+                "TailTip": 0.2185,
+                "Pelvis": 0.0652
+              },
+              {
+                "TailMid": 0.5117,
+                "TailTip": 0.2807,
+                "TailBase": 0.1807,
+                "Pelvis": 0.0269
+              }
+            ]
+          }
+        },
+        "mane": {
+          "p99": 1.0937723361676386,
+          "max": 1.4498012999169207,
+          "worst": {
+            "ratio": 1.4498012999169207,
+            "sample": 0,
+            "vertices": [
+              1533,
+              1375
+            ],
+            "weights": [
+              {
+                "Chest": 0.4022,
+                "Neck": 0.338,
+                "ForeUpper.L": 0.2349,
+                "Spine": 0.025
+              },
+              {
+                "Chest": 0.3853,
+                "Neck": 0.3227,
+                "ForeUpper.L": 0.2921
+              }
+            ]
+          }
+        },
+        "other": {
+          "p99": 1.1673861883227885,
+          "max": 1.4294761490546866,
+          "worst": {
+            "ratio": 1.4294761490546866,
+            "sample": 0,
+            "vertices": [
+              1609,
+              1612
+            ],
+            "weights": [
+              {
+                "Spine": 0.4957,
+                "Chest": 0.3193,
+                "HindUpper.R": 0.0945,
+                "Pelvis": 0.0905
+              },
+              {
+                "Spine": 0.4793,
+                "Chest": 0.3616,
+                "Pelvis": 0.0996,
+                "Neck": 0.0594
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Recovery": {
+      "crossings_per_sample": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "crossings_absent_in_rest_per_sample": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "regions": {
+        "haunch": {
+          "p99": 1.0000009540402592,
+          "max": 1.0000024331523534,
+          "worst": {
+            "ratio": 1.0000024331523534,
+            "sample": 0,
+            "vertices": [
+              1983,
+              1980
+            ],
+            "weights": [
+              {
+                "Pelvis": 0.5148,
+                "HindUpper.L": 0.2151,
+                "HindLower.L": 0.1552,
+                "TailBase": 0.1148
+              },
+              {
+                "Pelvis": 0.5063,
+                "HindUpper.L": 0.2339,
+                "HindLower.L": 0.2137,
+                "TailBase": 0.0461
+              }
+            ]
+          }
+        },
+        "tail": {
+          "p99": 1.0000032040711555,
+          "max": 1.000007178875479,
+          "worst": {
+            "ratio": 1.000007178875479,
+            "sample": 0,
+            "vertices": [
+              2563,
+              2557
+            ],
+            "weights": [
+              {
+                "TailTip": 0.911,
+                "TailMid": 0.0853,
+                "TailBase": 0.0037,
+                "Pelvis": 0.0
+              },
+              {
+                "TailTip": 0.8971,
+                "TailMid": 0.098,
+                "TailBase": 0.0049,
+                "Pelvis": 0.0001
+              }
+            ]
+          }
+        },
+        "mane": {
+          "p99": 1.0000017922177737,
+          "max": 1.0000066568868364,
+          "worst": {
+            "ratio": 1.0000066568868364,
+            "sample": 0,
+            "vertices": [
+              1283,
+              830
+            ],
+            "weights": [
+              {
+                "Head": 0.5212,
+                "Neck": 0.2605,
+                "Jaw": 0.1902,
+                "Chest": 0.0281
+              },
+              {
+                "Head": 0.5233,
+                "Neck": 0.2591,
+                "Jaw": 0.1898,
+                "Chest": 0.0279
+              }
+            ]
+          }
+        },
+        "other": {
+          "p99": 1.0000019998121865,
+          "max": 1.000003186350076,
+          "worst": {
+            "ratio": 1.000003186350076,
+            "sample": 0,
+            "vertices": [
+              1230,
+              1229
+            ],
+            "weights": [
+              {
+                "ForePaw.L": 1.0
+              },
+              {
+                "ForePaw.L": 1.0
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Death": {
+      "crossings_per_sample": [
+        10,
+        10,
+        13,
+        22,
+        31,
+        47,
+        47,
+        47,
+        47
+      ],
+      "crossings_absent_in_rest_per_sample": [
+        0,
+        0,
+        3,
+        12,
+        21,
+        37,
+        37,
+        37,
+        37
+      ],
+      "regions": {
+        "haunch": {
+          "p99": 1.2867600013530975,
+          "max": 2.229541836710141,
+          "worst": {
+            "ratio": 2.229541836710141,
+            "sample": 6,
+            "vertices": [
+              1983,
+              1980
+            ],
+            "weights": [
+              {
+                "Pelvis": 0.5148,
+                "HindUpper.L": 0.2151,
+                "HindLower.L": 0.1552,
+                "TailBase": 0.1148
+              },
+              {
+                "Pelvis": 0.5063,
+                "HindUpper.L": 0.2339,
+                "HindLower.L": 0.2137,
+                "TailBase": 0.0461
+              }
+            ]
+          }
+        },
+        "tail": {
+          "p99": 1.0892241841469836,
+          "max": 1.146308024926462,
+          "worst": {
+            "ratio": 1.146308024926462,
+            "sample": 6,
+            "vertices": [
+              2462,
+              2460
+            ],
+            "weights": [
+              {
+                "TailMid": 0.447,
+                "TailBase": 0.2972,
+                "TailTip": 0.2216,
+                "Pelvis": 0.0342
+              },
+              {
+                "TailMid": 0.4288,
+                "TailBase": 0.3407,
+                "TailTip": 0.1464,
+                "Pelvis": 0.0841
+              }
+            ]
+          }
+        },
+        "mane": {
+          "p99": 1.2641558599111626,
+          "max": 1.8008536285130952,
+          "worst": {
+            "ratio": 1.8008536285130952,
+            "sample": 6,
+            "vertices": [
+              1439,
+              1405
+            ],
+            "weights": [
+              {
+                "ForeUpper.R": 0.6702,
+                "Neck": 0.1353,
+                "Chest": 0.1098,
+                "ForeLower.R": 0.0848
+              },
+              {
+                "ForeUpper.R": 0.5404,
+                "Neck": 0.2472,
+                "Chest": 0.1795,
+                "ForeLower.R": 0.0329
+              }
+            ]
+          }
+        },
+        "other": {
+          "p99": 1.2880817685038377,
+          "max": 1.6890429071585609,
+          "worst": {
+            "ratio": 1.6890429071585609,
+            "sample": 6,
+            "vertices": [
+              1250,
+              1251
+            ],
+            "weights": [
+              {
+                "ForePaw.L": 0.6377,
+                "ForeLower.L": 0.2274,
+                "Neck": 0.0754,
+                "Chest": 0.0595
+              },
+              {
+                "ForePaw.L": 1.0
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

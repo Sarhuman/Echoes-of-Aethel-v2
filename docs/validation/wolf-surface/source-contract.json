@@ -1,0 +1,18 @@
+{
+  "baseline": "840dc6a95ef823be8e7d6429261da3cb388553ec",
+  "identical_static_signatures": {
+    "vertices": "8a43c4a71b54a34a3e3600bca5bdc41e47adcc3207f1fcdeb867867bb994b23e",
+    "polygons": "b5528c3de13a0b90e7b88e0856883ed950dee61dd426f1a4e72ad4d1726aab56",
+    "uvs": "1e21e3ebc16b7827e54c3d90ce3659e68a1dfb121aea4898fe2738c45dfc4c28",
+    "bones": "c52f34b7fb02a2f9f4c6ca0b9daf78190d0e4718ea76627655e0f235a149257f"
+  },
+  "unchanged_clip_pose_max_matrix_delta": {
+    "Idle": 0.0,
+    "Windup": 0.0,
+    "Bite": 0.0,
+    "Recovery": 0.0,
+    "Death": 0.0
+  },
+  "samples_per_clip": 9,
+  "only_Run_pose_changed": true
+}

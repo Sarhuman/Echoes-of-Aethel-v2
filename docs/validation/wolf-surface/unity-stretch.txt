@@ -1,0 +1,4 @@
+Run haunchMax=3,373738 maneMax=4,570235
+Windup haunchMax=1,372498 maneMax=2,114569
+Bite haunchMax=1,372498 maneMax=1,449785
+Death haunchMax=2,229528 maneMax=1,800828
