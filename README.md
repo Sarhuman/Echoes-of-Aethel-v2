@@ -18,6 +18,7 @@
 ---
 
 ## Abrir e testar
+0. Após clonar ou trocar para a branch de arte, executar `git lfs install` e `git lfs pull` para obter os FBXs e PNGs reais antes de abrir o Unity.
 1. Usar **Unity 6000.6.6f1**, com Windows Build Support. Adicionar a raiz deste repositório no Unity Hub; não criar outro projeto nem copiar conteúdo da v1.
 2. Aguardar a importação dos pacotes fixados: **URP 17.6.0**, **Input System 1.20.0**, **Test Framework 1.8.0**. Active Input Handling já usa o Input System novo.
 3. Abrir `Assets/Scenes/Aethel_FirstArena.unity` e entrar em Play. **WASD/setas** movem; **Space/Shift** executam dash; **mouse esquerdo/J** atacam. Gamepad: stick esquerdo, botão South para dash e West para ataque.
@@ -31,6 +32,8 @@ O gerador **Create First Arena (one time)** é uma ação inicial explícita: re
 
 Seguir [ART_INTEGRATION.md](docs/engineering/ART_INTEGRATION.md). Modelos e texturas em `Assets/Art/`; personagens em `Assets/Prefabs/Characters/`; ambiente em `Assets/Prefabs/Environment/`. Substituir somente o child visual, preservando raiz física, VisualRoot, sockets, origens de dano e GUIDs. `AethelArtBindings` mostra os pontos de integração no Inspector. O shader original `Aethel/Painted URP` não exige assets pagos.
 
+Os oito pacotes recebidos em 19/10/2026 têm inspeção e redução de malhas em [docs/validation/assets](docs/validation/assets). Bastião possui apenas caminhada; o Lobo não possui rig/clips fornecidos. Integração técnica não significa aprovação de arte ou animação. O piso tem prefab separado para posicionamento autoral; o chão físico atual da arena é preservado.
+
 ## Architecture
 - `Assets/Scripts/Runtime/AethelPlayerController.cs`: Input System keyboard/gamepad, movement, dash, stamina and single basic melee attack.
 - `AethelHealth.cs`: health with monotonic time-based invulnerability grants.
@@ -43,6 +46,6 @@ Seguir [ART_INTEGRATION.md](docs/engineering/ART_INTEGRATION.md). Modelos e text
 - Do not overwrite/regenerate Unity scenes during builds; preserve `.meta` GUIDs.
 - Keep game rules, rendering, prefabs and asset pipeline separate.
 - Avoid committing generated `Library/` or `Temp/`.
-- Install/configure Git LFS before adding large FBX/BLEND/textures, then enable the commented rules in `.gitattributes`.
+- Git LFS is enabled for exported FBXs and art PNGs; use `git lfs pull` after cloning.
 - Work in focused PRs; validate playability and visual quality in actual Unity Game view.
 - Preserve original lore from v1 as reference only, after selective review. No bulk copying of legacy runtime.

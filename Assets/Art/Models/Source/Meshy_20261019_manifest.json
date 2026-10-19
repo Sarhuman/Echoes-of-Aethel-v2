@@ -1,0 +1,292 @@
+[
+  {
+    "asset": "Bastiao",
+    "source_zip": "Meshy_AI_knight_rigged_biped(1).zip",
+    "source_sha256": "52a6b2105b8ac9997e7a434cbd25aa748f311717f7b01b4390b122c0014f2cee",
+    "files": [
+      {
+        "archive_member": "Meshy_AI_knight_rigged_biped/Meshy_AI_knight_rigged_biped_Animation_Walking_frame_rate_30.fbx",
+        "name": "Meshy_AI_knight_rigged_biped_Animation_Walking_frame_rate_30.fbx",
+        "kind": "fbx",
+        "bytes": 20034748
+      },
+      {
+        "archive_member": "Meshy_AI_knight_rigged_biped/Meshy_AI_knight_rigged_biped_texture_0.png",
+        "name": "Meshy_AI_knight_rigged_biped_texture_0.png",
+        "kind": "texture",
+        "bytes": 19187522
+      },
+      {
+        "archive_member": "Meshy_AI_knight_rigged_biped/Meshy_AI_knight_rigged_biped_texture_0_metallic.png",
+        "name": "Meshy_AI_knight_rigged_biped_texture_0_metallic.png",
+        "kind": "texture",
+        "bytes": 3894582
+      },
+      {
+        "archive_member": "Meshy_AI_knight_rigged_biped/Meshy_AI_knight_rigged_biped_texture_0_roughness.png",
+        "name": "Meshy_AI_knight_rigged_biped_texture_0_roughness.png",
+        "kind": "texture",
+        "bytes": 3896177
+      }
+    ]
+  },
+  {
+    "asset": "LoboEtereo",
+    "source_zip": "Meshy_AI_mystic_wolf_5k_1019124205_texture_fbx.zip",
+    "source_sha256": "8482c80e3a8011b9632615d020b02fd44f57a44104a5fe26a45fd0a0ef0042fa",
+    "files": [
+      {
+        "archive_member": "Meshy_AI_mystic_wolf_5k_1019124205_texture_fbx/Meshy_AI_mystic_wolf_5k_1019124205_texture.fbx",
+        "name": "Meshy_AI_mystic_wolf_5k_1019124205_texture.fbx",
+        "kind": "fbx",
+        "bytes": 22343084
+      },
+      {
+        "archive_member": "Meshy_AI_mystic_wolf_5k_1019124205_texture_fbx/Meshy_AI_mystic_wolf_5k_1019124205_texture.png",
+        "name": "Meshy_AI_mystic_wolf_5k_1019124205_texture.png",
+        "kind": "texture",
+        "bytes": 16387169
+      },
+      {
+        "archive_member": "Meshy_AI_mystic_wolf_5k_1019124205_texture_fbx/Meshy_AI_mystic_wolf_5k_1019124205_texture_metallic.png",
+        "name": "Meshy_AI_mystic_wolf_5k_1019124205_texture_metallic.png",
+        "kind": "texture",
+        "bytes": 1439119
+      },
+      {
+        "archive_member": "Meshy_AI_mystic_wolf_5k_1019124205_texture_fbx/Meshy_AI_mystic_wolf_5k_1019124205_texture_metallic_roughness.png",
+        "name": "Meshy_AI_mystic_wolf_5k_1019124205_texture_metallic_roughness.png",
+        "kind": "texture",
+        "bytes": 6711650
+      },
+      {
+        "archive_member": "Meshy_AI_mystic_wolf_5k_1019124205_texture_fbx/Meshy_AI_mystic_wolf_5k_1019124205_texture_roughness.png",
+        "name": "Meshy_AI_mystic_wolf_5k_1019124205_texture_roughness.png",
+        "kind": "texture",
+        "bytes": 2392165
+      }
+    ]
+  },
+  {
+    "asset": "Machado",
+    "source_zip": "Meshy_AI_battle_axe_3k_1019121451_texture_fbx.zip",
+    "source_sha256": "80cc2c3577c543f9abba75b17e9a0326d562880d2aead3c3f74a30b4dea2157c",
+    "files": [
+      {
+        "archive_member": "Meshy_AI_battle_axe_3k_1019121451_texture_fbx/Meshy_AI_battle_axe_3k_1019121451_texture.fbx",
+        "name": "Meshy_AI_battle_axe_3k_1019121451_texture.fbx",
+        "kind": "fbx",
+        "bytes": 23442988
+      },
+      {
+        "archive_member": "Meshy_AI_battle_axe_3k_1019121451_texture_fbx/Meshy_AI_battle_axe_3k_1019121451_texture.png",
+        "name": "Meshy_AI_battle_axe_3k_1019121451_texture.png",
+        "kind": "texture",
+        "bytes": 14097131
+      },
+      {
+        "archive_member": "Meshy_AI_battle_axe_3k_1019121451_texture_fbx/Meshy_AI_battle_axe_3k_1019121451_texture_metallic.png",
+        "name": "Meshy_AI_battle_axe_3k_1019121451_texture_metallic.png",
+        "kind": "texture",
+        "bytes": 2849605
+      },
+      {
+        "archive_member": "Meshy_AI_battle_axe_3k_1019121451_texture_fbx/Meshy_AI_battle_axe_3k_1019121451_texture_metallic_roughness.png",
+        "name": "Meshy_AI_battle_axe_3k_1019121451_texture_metallic_roughness.png",
+        "kind": "texture",
+        "bytes": 8862734
+      },
+      {
+        "archive_member": "Meshy_AI_battle_axe_3k_1019121451_texture_fbx/Meshy_AI_battle_axe_3k_1019121451_texture_roughness.png",
+        "name": "Meshy_AI_battle_axe_3k_1019121451_texture_roughness.png",
+        "kind": "texture",
+        "bytes": 2649298
+      }
+    ]
+  },
+  {
+    "asset": "Escudo",
+    "source_zip": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_fbx.zip",
+    "source_sha256": "b12e6d97efef4c6ec8d18ad06ad1fc5f39d1efd5bbfa25dcf2d5297a80f6ac66",
+    "files": [
+      {
+        "archive_member": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_fbx/Meshy_AI_paladin_shield_1019131114_image-to-3d-texture.fbx",
+        "name": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture.fbx",
+        "kind": "fbx",
+        "bytes": 38347020
+      },
+      {
+        "archive_member": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_fbx/Meshy_AI_paladin_shield_1019131114_image-to-3d-texture.png",
+        "name": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture.png",
+        "kind": "texture",
+        "bytes": 15771905
+      },
+      {
+        "archive_member": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_fbx/Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_metallic.png",
+        "name": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_metallic.png",
+        "kind": "texture",
+        "bytes": 2608803
+      },
+      {
+        "archive_member": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_fbx/Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_normal.png",
+        "name": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_normal.png",
+        "kind": "texture",
+        "bytes": 13977126
+      },
+      {
+        "archive_member": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_fbx/Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_roughness.png",
+        "name": "Meshy_AI_paladin_shield_1019131114_image-to-3d-texture_roughness.png",
+        "kind": "texture",
+        "bytes": 2857937
+      }
+    ]
+  },
+  {
+    "asset": "Arvore",
+    "source_zip": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_fbx.zip",
+    "source_sha256": "4f05e20ea726e0c78d60e29cf90ed5fcc295a342e216e7d00b706f160779bcd9",
+    "files": [
+      {
+        "archive_member": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_fbx/Meshy_AI_ancient_tree_1019134827_image-to-3d-texture.fbx",
+        "name": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture.fbx",
+        "kind": "fbx",
+        "bytes": 143503724
+      },
+      {
+        "archive_member": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_fbx/Meshy_AI_ancient_tree_1019134827_image-to-3d-texture.png",
+        "name": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture.png",
+        "kind": "texture",
+        "bytes": 23260275
+      },
+      {
+        "archive_member": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_fbx/Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_metallic.png",
+        "name": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_metallic.png",
+        "kind": "texture",
+        "bytes": 49674
+      },
+      {
+        "archive_member": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_fbx/Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_normal.png",
+        "name": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_normal.png",
+        "kind": "texture",
+        "bytes": 19168297
+      },
+      {
+        "archive_member": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_fbx/Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_roughness.png",
+        "name": "Meshy_AI_ancient_tree_1019134827_image-to-3d-texture_roughness.png",
+        "kind": "texture",
+        "bytes": 1831296
+      }
+    ]
+  },
+  {
+    "asset": "Rocha",
+    "source_zip": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_fbx.zip",
+    "source_sha256": "114f557fd78891aab0dc8e55d4819d41496a38f87856fc1ff194073e6fb23558",
+    "files": [
+      {
+        "archive_member": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_fbx/Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture.fbx",
+        "name": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture.fbx",
+        "kind": "fbx",
+        "bytes": 93703964
+      },
+      {
+        "archive_member": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_fbx/Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture.png",
+        "name": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture.png",
+        "kind": "texture",
+        "bytes": 23575554
+      },
+      {
+        "archive_member": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_fbx/Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_metallic.png",
+        "name": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_metallic.png",
+        "kind": "texture",
+        "bytes": 32638
+      },
+      {
+        "archive_member": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_fbx/Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_normal.png",
+        "name": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_normal.png",
+        "kind": "texture",
+        "bytes": 19066400
+      },
+      {
+        "archive_member": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_fbx/Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_roughness.png",
+        "name": "Meshy_AI_mossy_boulder_1019134851_image-to-3d-texture_roughness.png",
+        "kind": "texture",
+        "bytes": 1749146
+      }
+    ]
+  },
+  {
+    "asset": "Pilar",
+    "source_zip": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_fbx.zip",
+    "source_sha256": "af61f7664800e83ce273afc8a90ac79f3bf3253845a059e6b4699f558c90de89",
+    "files": [
+      {
+        "archive_member": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_fbx/Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture.fbx",
+        "name": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture.fbx",
+        "kind": "fbx",
+        "bytes": 101021724
+      },
+      {
+        "archive_member": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_fbx/Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture.png",
+        "name": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture.png",
+        "kind": "texture",
+        "bytes": 26391064
+      },
+      {
+        "archive_member": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_fbx/Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_metallic.png",
+        "name": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_metallic.png",
+        "kind": "texture",
+        "bytes": 59150
+      },
+      {
+        "archive_member": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_fbx/Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_normal.png",
+        "name": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_normal.png",
+        "kind": "texture",
+        "bytes": 22975514
+      },
+      {
+        "archive_member": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_fbx/Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_roughness.png",
+        "name": "Meshy_AI_ruined_pillar_1019134841_image-to-3d-texture_roughness.png",
+        "kind": "texture",
+        "bytes": 1777201
+      }
+    ]
+  },
+  {
+    "asset": "Piso",
+    "source_zip": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_fbx.zip",
+    "source_sha256": "99c78beae4cc2699f0e3b0dc3a42e221750ff58a45866dff7a22a3f3c970b333",
+    "files": [
+      {
+        "archive_member": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_fbx/Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture.fbx",
+        "name": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture.fbx",
+        "kind": "fbx",
+        "bytes": 55611996
+      },
+      {
+        "archive_member": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_fbx/Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture.png",
+        "name": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture.png",
+        "kind": "texture",
+        "bytes": 24113795
+      },
+      {
+        "archive_member": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_fbx/Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_metallic.png",
+        "name": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_metallic.png",
+        "kind": "texture",
+        "bytes": 44583
+      },
+      {
+        "archive_member": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_fbx/Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_normal.png",
+        "name": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_normal.png",
+        "kind": "texture",
+        "bytes": 20239720
+      },
+      {
+        "archive_member": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_fbx/Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_roughness.png",
+        "name": "Meshy_AI_modular_ground_tile_1019134836_image-to-3d-texture_roughness.png",
+        "kind": "texture",
+        "bytes": 1623999
+      }
+    ]
+  }
+]
