@@ -1,0 +1,21 @@
+Unity 6000.6.6f1 / URP 17.6.0; 2026-10-19
+EditMode: 24 passed, 0 failed; PlayMode: 16 passed, 0 failed
+LOG polish-refresh.log
+AETHEL_WOLF_EXPORT_FIT_REFRESHED restHeight=0,9000001
+AETHEL_WOLF_BINDING_AUDIT_COMPLETE
+LOG polish-build.log
+AETHEL_SAVED_ARENA_VALIDATED
+AETHEL_WINDOWS_BUILD_PASSED; scene/prefab/meta SHA256 unchanged; 190733887 bytes
+LOG polish-native-wolf.log
+AETHEL_WOLF_SMOKE_HARDWARE: Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz; AMD Radeon RX 580 2048SP; RAM=16224MB
+AETHEL_WOLF_BUILD_SMOKE_PASSED
+LOG polish-native-foundation.log
+AETHEL_SMOKE_HARDWARE: Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz; AMD Radeon RX 580 2048SP; RAM=16224MB
+AETHEL_BUILD_SMOKE_PASSED
+LOG polish-reopen.log
+AETHEL_SAVED_ARENA_VALIDATED
+Windows wolf smoke exit: 0
+Windows foundation smoke exit: 0
+Editor reopen exit: 0
+AETHEL_POLISH_REOPEN_RUNTIME_SNAPSHOT_UNCHANGED 127 files
+AETHEL_WOLF_POLISH_FOUNDATION_PRESERVED 66 files

@@ -8,6 +8,87 @@ using UnityEngine;
 public sealed class WolfRigTests
 {
     [Test]
+    public void RunningSolesTrackThreeMetresPerSecondDuringDiagonalSupport()
+    {
+        WithSkin((animator,skin,visual,baked)=> {
+            var run=Clip("Run");
+            foreach(string foot in new[]{"ForePaw.L","HindPaw.R","ForePaw.R","HindPaw.L"}) {
+                Clip("Idle").SampleAnimation(animator.gameObject,0);
+                var ids=SolePatch(skin,visual,baked,foot);
+                float start=run.length*(foot=="ForePaw.L" || foot=="HindPaw.R" ? .08f : .58f);
+                run.SampleAnimation(animator.gameObject,start);var a=Centroid(skin,visual,baked,ids);
+                run.SampleAnimation(animator.gameObject,start+1f/30f);var b=Centroid(skin,visual,baked,ids);
+                Assert.Less((b-a+Vector3.forward*.1f).magnitude,.012f,foot+": support must compensate actual AI travel, not slide with the shell.");
+                Assert.Less(Mathf.Abs(b.y-a.y),.006f,foot+": no vertical bounce while supporting.");
+            }
+        });
+    }
+
+    [Test]
+    public void AttackSolesStayPlantedAndContactReturnHaveContinuousSkin()
+    {
+        WithSkin((animator,skin,visual,baked)=> {
+            Clip("Idle").SampleAnimation(animator.gameObject,0);
+            var patches=new[]{"ForePaw.L","HindPaw.R","ForePaw.R","HindPaw.L"}.Select(n=>SolePatch(skin,visual,baked,n)).ToArray();
+            var rest=patches.Select(ids=>Centroid(skin,visual,baked,ids)).ToArray();
+            float maximum=0;var lines=new System.Collections.Generic.List<string>();
+            foreach(string name in new[]{"Windup","Bite","Recovery"}) {
+                var clip=Clip(name);
+                for(int step=0;step<=16;step++) {
+                    clip.SampleAnimation(animator.gameObject,clip.length*step/16f);
+                    for(int i=0;i<patches.Length;i++) {
+                        var delta=Centroid(skin,visual,baked,patches[i])-rest[i];
+                        maximum=Mathf.Max(maximum,delta.magnitude);
+                        lines.Add(name+" sample="+step+" sole="+i+" delta="+delta.ToString("F6"));
+                    }
+                }
+            }
+            System.IO.Directory.CreateDirectory("TestResults");
+            System.IO.File.WriteAllLines("TestResults/wolf-polish-contact.txt",lines);
+            Assert.Less(maximum,.008f,"Attack maximum sole displacement; see TestResults/wolf-polish-contact.txt");
+            AssertSeam(animator,skin,baked,Clip("Windup"),Clip("Windup").length,Clip("Bite"),0,.002f);
+            AssertSeam(animator,skin,baked,Clip("Bite"),Clip("Bite").length,Clip("Recovery"),.25f,.002f);
+            AssertSeam(animator,skin,baked,Clip("Run"),0,Clip("Run"),Clip("Run").length,.002f);
+        });
+    }
+
+    static AnimationClip Clip(string name)=>AssetDatabase.LoadAllAssetsAtPath(AethelWolfRigTools.Model).OfType<AnimationClip>().Single(c=>c.name==name);
+
+    static void WithSkin(System.Action<Animator,SkinnedMeshRenderer,Transform,Mesh> check)
+    {
+        var scene=UnityEditor.SceneManagement.EditorSceneManager.NewPreviewScene();var baked=new Mesh();
+        try {
+            var instance=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(AethelWolfRigTools.Prefab),scene);
+            check(instance.GetComponentInChildren<Animator>(),instance.GetComponentInChildren<SkinnedMeshRenderer>(),instance.transform.Find("VisualRoot"),baked);
+        }finally{Object.DestroyImmediate(baked);UnityEditor.SceneManagement.EditorSceneManager.ClosePreviewScene(scene);}
+    }
+
+    static int[] SolePatch(SkinnedMeshRenderer skin,Transform visual,Mesh baked,string bone)
+    {
+        int index=System.Array.FindIndex(skin.bones,b=>b.name==bone);
+        var weights=skin.sharedMesh.boneWeights;
+        var ids=Enumerable.Range(0,weights.Length).Where(i=>weights[i].boneIndex0==index && weights[i].weight0>.999f).ToArray();
+        Assert.Greater(ids.Length,4,bone);
+        skin.BakeMesh(baked);var points=baked.vertices;
+        float min=ids.Min(i=>visual.InverseTransformPoint(skin.transform.TransformPoint(points[i])).y);
+        return ids.Where(i=>visual.InverseTransformPoint(skin.transform.TransformPoint(points[i])).y<min+.015f).ToArray();
+    }
+
+    static Vector3 Centroid(SkinnedMeshRenderer skin,Transform visual,Mesh baked,int[] ids)
+    {
+        skin.BakeMesh(baked);var points=baked.vertices;
+        return ids.Aggregate(Vector3.zero,(sum,i)=>sum+visual.InverseTransformPoint(skin.transform.TransformPoint(points[i])))/ids.Length;
+    }
+
+    static void AssertSeam(Animator animator,SkinnedMeshRenderer skin,Mesh baked,AnimationClip a,float at,AnimationClip b,float bt,float tolerance)
+    {
+        a.SampleAnimation(animator.gameObject,at);skin.BakeMesh(baked);var first=baked.vertices;
+        b.SampleAnimation(animator.gameObject,bt);skin.BakeMesh(baked);var second=baked.vertices;
+        float delta=first.Zip(second,(x,y)=>skin.transform.TransformVector(x-y).magnitude).Max();
+        Assert.Less(delta,tolerance,a.name+" -> "+b.name+" seam (metres)");
+    }
+
+    [Test]
     public void RepeatingInitialIntegrationRefusesBeforeEditingAssets()
     {
         var before=System.IO.File.ReadAllBytes(AethelWolfRigTools.Prefab);
@@ -38,6 +119,7 @@ public sealed class WolfRigTests
         var baked=new Mesh();
         try {
             var instance=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(AethelWolfRigTools.Model),scene);
+            Clip("Idle").SampleAnimation(instance.GetComponentInChildren<Animator>().gameObject,0);
             var skin=instance.GetComponentInChildren<SkinnedMeshRenderer>(); skin.BakeMesh(baked);
             var points=baked.vertices.Select(v=>skin.transform.TransformPoint(v)).ToArray();
             float height=points.Max(v=>v.y)-points.Min(v=>v.y);

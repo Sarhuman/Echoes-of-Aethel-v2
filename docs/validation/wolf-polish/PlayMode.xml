@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="16" result="Passed" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 21:38:32Z" end-time="2026-10-19 21:38:50Z" duration="17,9508817">
+  <test-suite type="TestSuite" id="1025" name="Echoes of Aethel v2" fullname="Echoes of Aethel v2" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-10-19 21:38:32Z" end-time="2026-10-19 21:38:50Z" duration="17.950882" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1046" name="EchoesOfAethel.PlayModeTests.dll" fullname="C:/Users/Sarumano/Documents/ChatGPT/Echoes of Aethel/Echoes-of-Aethel-v2/Library/ScriptAssemblies/EchoesOfAethel.PlayModeTests.dll" runstate="Runnable" testcasecount="16" result="Passed" start-time="2026-10-19 21:38:32Z" end-time="2026-10-19 21:38:50Z" duration="17.936981" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="36020" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestFixture" id="1026" name="FoundationTests" fullname="FoundationTests" classname="FoundationTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-19 21:38:32Z" end-time="2026-10-19 21:38:39Z" duration="7.392387" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1029" name="BasicAttackDeduplicatesMultipleCollidersAndRespectsCooldown" fullname="FoundationTests.BasicAttackDeduplicatesMultipleCollidersAndRespectsCooldown" methodname="BasicAttackDeduplicatesMultipleCollidersAndRespectsCooldown" classname="FoundationTests" runstate="Runnable" seed="395066404" result="Passed" start-time="2026-10-19 21:38:32Z" end-time="2026-10-19 21:38:33Z" duration="1.230916" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1031" name="DashCannotCrossWall" fullname="FoundationTests.DashCannotCrossWall" methodname="DashCannotCrossWall" classname="FoundationTests" runstate="Runnable" seed="1280161865" result="Passed" start-time="2026-10-19 21:38:33Z" end-time="2026-10-19 21:38:34Z" duration="0.311779" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1028" name="DashCostCooldownInvulnerabilityAndInsufficientStamina" fullname="FoundationTests.DashCostCooldownInvulnerabilityAndInsufficientStamina" methodname="DashCostCooldownInvulnerabilityAndInsufficientStamina" classname="FoundationTests" runstate="Runnable" seed="990921387" result="Passed" start-time="2026-10-19 21:38:34Z" end-time="2026-10-19 21:38:35Z" duration="1.710442" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1032" name="InvulnerabilityOnlyExtendsAndDeathOccursOnce" fullname="FoundationTests.InvulnerabilityOnlyExtendsAndDeathOccursOnce" methodname="InvulnerabilityOnlyExtendsAndDeathOccursOnce" classname="FoundationTests" runstate="Runnable" seed="1292206394" result="Passed" start-time="2026-10-19 21:38:35Z" end-time="2026-10-19 21:38:35Z" duration="0.255308" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1027" name="MovementRotationAndFixedCamera" fullname="FoundationTests.MovementRotationAndFixedCamera" methodname="MovementRotationAndFixedCamera" classname="FoundationTests" runstate="Runnable" seed="479142725" result="Passed" start-time="2026-10-19 21:38:35Z" end-time="2026-10-19 21:38:38Z" duration="2.205499" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1030" name="WolfChasesSettlesTelegraphsAndDamagesOnce" fullname="FoundationTests.WolfChasesSettlesTelegraphsAndDamagesOnce" methodname="WolfChasesSettlesTelegraphsAndDamagesOnce" classname="FoundationTests" runstate="Runnable" seed="1561017008" result="Passed" start-time="2026-10-19 21:38:38Z" end-time="2026-10-19 21:38:39Z" duration="1.654172" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1033" name="ImportedArtRuntimeTests" fullname="ImportedArtRuntimeTests" classname="ImportedArtRuntimeTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-19 21:38:39Z" end-time="2026-10-19 21:38:41Z" duration="2.125107" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1035" name="SavedCharacterPrefabsStillApplyOneHitAndWolfBite" fullname="ImportedArtRuntimeTests.SavedCharacterPrefabsStillApplyOneHitAndWolfBite" methodname="SavedCharacterPrefabsStillApplyOneHitAndWolfBite" classname="ImportedArtRuntimeTests" runstate="Runnable" seed="1180227176" result="Passed" start-time="2026-10-19 21:38:39Z" end-time="2026-10-19 21:38:41Z" duration="1.395978" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1034" name="SuppliedWalkFollowsExistingMotorAndPausesDuringDash" fullname="ImportedArtRuntimeTests.SuppliedWalkFollowsExistingMotorAndPausesDuringDash" methodname="SuppliedWalkFollowsExistingMotorAndPausesDuringDash" classname="ImportedArtRuntimeTests" runstate="Runnable" seed="343843294" result="Passed" start-time="2026-10-19 21:38:41Z" end-time="2026-10-19 21:38:41Z" duration="0.727677" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1036" name="SavedArenaRuntimeTests" fullname="SavedArenaRuntimeTests" classname="SavedArenaRuntimeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-19 21:38:41Z" end-time="2026-10-19 21:38:43Z" duration="1.158085" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1037" name="SavedArenaRunsAndCanBeCaptured" fullname="SavedArenaRuntimeTests.SavedArenaRunsAndCanBeCaptured" methodname="SavedArenaRunsAndCanBeCaptured" classname="SavedArenaRuntimeTests" runstate="Runnable" seed="2080353629" result="Passed" start-time="2026-10-19 21:38:41Z" end-time="2026-10-19 21:38:43Z" duration="1.156776" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1038" name="WolfVisualTests" fullname="WolfVisualTests" classname="WolfVisualTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-19 21:38:43Z" end-time="2026-10-19 21:38:50Z" duration="7.258489" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1039" name="CapturePolishedGaitAndAttackInRealUrp" fullname="WolfVisualTests.CapturePolishedGaitAndAttackInRealUrp" methodname="CapturePolishedGaitAndAttackInRealUrp" classname="WolfVisualTests" runstate="Runnable" seed="558334366" result="Passed" start-time="2026-10-19 21:38:43Z" end-time="2026-10-19 21:38:45Z" duration="2.739777" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1041" name="DisablingPresentationHidesCueWithoutCancellingDamage" fullname="WolfVisualTests.DisablingPresentationHidesCueWithoutCancellingDamage" methodname="DisablingPresentationHidesCueWithoutCancellingDamage" classname="WolfVisualTests" runstate="Runnable" seed="680060590" result="Passed" start-time="2026-10-19 21:38:45Z" end-time="2026-10-19 21:38:46Z" duration="0.729698" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1042" name="InvulnerabilityBlocksDamageWhileAnimationCompletes" fullname="WolfVisualTests.InvulnerabilityBlocksDamageWhileAnimationCompletes" methodname="InvulnerabilityBlocksDamageWhileAnimationCompletes" classname="WolfVisualTests" runstate="Runnable" seed="372410345" result="Passed" start-time="2026-10-19 21:38:46Z" end-time="2026-10-19 21:38:47Z" duration="0.496642" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1045" name="KillingBiteStillPlaysContactBeforeReturningToIdle" fullname="WolfVisualTests.KillingBiteStillPlaysContactBeforeReturningToIdle" methodname="KillingBiteStillPlaysContactBeforeReturningToIdle" classname="WolfVisualTests" runstate="Runnable" seed="1830514949" result="Passed" start-time="2026-10-19 21:38:47Z" end-time="2026-10-19 21:38:47Z" duration="0.747605" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1043" name="LeavingContactRangeDuringTelegraphAvoidsDamage" fullname="WolfVisualTests.LeavingContactRangeDuringTelegraphAvoidsDamage" methodname="LeavingContactRangeDuringTelegraphAvoidsDamage" classname="WolfVisualTests" runstate="Runnable" seed="141047635" result="Passed" start-time="2026-10-19 21:38:47Z" end-time="2026-10-19 21:38:48Z" duration="0.494295" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1040" name="SkeletonRunsTelegraphsContactsRecoversAndDies" fullname="WolfVisualTests.SkeletonRunsTelegraphsContactsRecoversAndDies" methodname="SkeletonRunsTelegraphsContactsRecoversAndDies" classname="WolfVisualTests" runstate="Runnable" seed="413786692" result="Passed" start-time="2026-10-19 21:38:48Z" end-time="2026-10-19 21:38:50Z" duration="1.994719" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[AETHEL_RUN_BEFORE normalized=0,2872643 speed=0,999999 enabled=True culling=AlwaysAnimate bone=(0.94947, 0.00000, 0.00000, 0.31387) skinScale=(1.00, 1.00, 1.00)
+AETHEL_RUN_AFTER normalized=0,4880568 speed=1,00001 bone=(0.98256, 0.00000, 0.00000, 0.18597) stateRun=True
+]]></output>
+        </test-case>
+        <test-case id="1044" name="TargetDeathHidesPendingWindupPresentation" fullname="WolfVisualTests.TargetDeathHidesPendingWindupPresentation" methodname="TargetDeathHidesPendingWindupPresentation" classname="WolfVisualTests" runstate="Runnable" seed="1172982372" result="Passed" start-time="2026-10-19 21:38:50Z" end-time="2026-10-19 21:38:50Z" duration="0.050380" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:/Users/Sarumano/AppData/LocalLow/Sarhuman/Echoes of Aethel v2\TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

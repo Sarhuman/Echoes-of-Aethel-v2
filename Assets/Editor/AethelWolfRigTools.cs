@@ -21,6 +21,15 @@ public static class AethelWolfRigTools
         if(EditorApplication.isPlayingOrWillChangePlaymode || BuildPipeline.isBuildingPlayer)
             throw new InvalidOperationException("Refresh requires edit mode outside a build.");
         AssetDatabase.ImportAsset(Model,ImportAssetOptions.ForceUpdate);
+        // Preserve clip names/IDs/settings, but follow the explicitly exported take
+        // ranges when sampling density changes. Never run from an import hook.
+        var importer=(ModelImporter)AssetImporter.GetAtPath(Model);
+        var clips=importer.clipAnimations;
+        foreach(var clip in clips) {
+            var take=importer.defaultClipAnimations.Single(c=>c.takeName==clip.takeName);
+            clip.firstFrame=take.firstFrame;clip.lastFrame=take.lastFrame;
+        }
+        importer.clipAnimations=clips;importer.SaveAndReimport();
         var root=PrefabUtility.LoadPrefabContents(Prefab);
         try {
             var visual=root.transform.Find("VisualRoot");
@@ -32,7 +41,9 @@ public static class AethelWolfRigTools
             float height=FitBindMesh(model,visual,skin);
             var bounds=skin.sharedMesh.bounds;bounds.Expand(bounds.size.magnitude*.7f);skin.localBounds=bounds;
             PrefabUtility.SaveAsPrefabAsset(root,Prefab);
-            var report="docs/validation/wolf/unity-import.txt";
+            var report="docs/validation/wolf-polish/unity-import.txt";
+            Directory.CreateDirectory(Path.GetDirectoryName(report));
+            if(!File.Exists(report))File.WriteAllText(report,"Explicit refresh of existing rig; no scene write.\n");
             if(File.Exists(report))File.WriteAllLines(report,File.ReadAllLines(report).Where(l=>!l.StartsWith("Rest geometry height:")).Concat(new[]{"Rest geometry height: "+height.ToString("F5")}));
             Debug.Log("AETHEL_WOLF_EXPORT_FIT_REFRESHED restHeight="+height);
         }finally{PrefabUtility.UnloadPrefabContents(root);}
@@ -62,7 +73,8 @@ public static class AethelWolfRigTools
                 lines.Add("SAMPLED_VERTICES_DELTA "+a.vertices.Zip(bmesh.vertices,(x,y)=>(x-y).magnitude).Max());
                 Object.DestroyImmediate(a);Object.DestroyImmediate(bmesh);
             }
-            File.WriteAllLines("docs/validation/wolf/binding-audit.txt",lines);
+            Directory.CreateDirectory("docs/validation/wolf-polish");
+            File.WriteAllLines("docs/validation/wolf-polish/binding-audit.txt",lines);
             Debug.Log("AETHEL_WOLF_BINDING_AUDIT_COMPLETE");
         }finally{PrefabUtility.UnloadPrefabContents(root);}
     }
