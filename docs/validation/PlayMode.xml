@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="7" result="Passed" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 04:32:55Z" end-time="2026-10-19 04:33:04Z" duration="8,258735">
+  <test-suite type="TestSuite" id="1014" name="Echoes of Aethel v2" fullname="Echoes of Aethel v2" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-19 04:32:55Z" end-time="2026-10-19 04:33:04Z" duration="8.258735" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1024" name="EchoesOfAethel.PlayModeTests.dll" fullname="C:/Users/Sarumano/Documents/ChatGPT/Echoes of Aethel/Echoes-of-Aethel-v2/Library/ScriptAssemblies/EchoesOfAethel.PlayModeTests.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-19 04:32:55Z" end-time="2026-10-19 04:33:04Z" duration="8.245419" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="35024" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestFixture" id="1015" name="FoundationTests" fullname="FoundationTests" classname="FoundationTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-19 04:32:55Z" end-time="2026-10-19 04:33:03Z" duration="7.313916" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1018" name="BasicAttackDeduplicatesMultipleCollidersAndRespectsCooldown" fullname="FoundationTests.BasicAttackDeduplicatesMultipleCollidersAndRespectsCooldown" methodname="BasicAttackDeduplicatesMultipleCollidersAndRespectsCooldown" classname="FoundationTests" runstate="Runnable" seed="1089015709" result="Passed" start-time="2026-10-19 04:32:55Z" end-time="2026-10-19 04:32:57Z" duration="1.206724" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1020" name="DashCannotCrossWall" fullname="FoundationTests.DashCannotCrossWall" methodname="DashCannotCrossWall" classname="FoundationTests" runstate="Runnable" seed="1642837768" result="Passed" start-time="2026-10-19 04:32:57Z" end-time="2026-10-19 04:32:57Z" duration="0.310537" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1017" name="DashCostCooldownInvulnerabilityAndInsufficientStamina" fullname="FoundationTests.DashCostCooldownInvulnerabilityAndInsufficientStamina" methodname="DashCostCooldownInvulnerabilityAndInsufficientStamina" classname="FoundationTests" runstate="Runnable" seed="47059563" result="Passed" start-time="2026-10-19 04:32:57Z" end-time="2026-10-19 04:32:59Z" duration="1.710506" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1021" name="InvulnerabilityOnlyExtendsAndDeathOccursOnce" fullname="FoundationTests.InvulnerabilityOnlyExtendsAndDeathOccursOnce" methodname="InvulnerabilityOnlyExtendsAndDeathOccursOnce" classname="FoundationTests" runstate="Runnable" seed="783047348" result="Passed" start-time="2026-10-19 04:32:59Z" end-time="2026-10-19 04:32:59Z" duration="0.255021" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1016" name="MovementRotationAndFixedCamera" fullname="FoundationTests.MovementRotationAndFixedCamera" methodname="MovementRotationAndFixedCamera" classname="FoundationTests" runstate="Runnable" seed="718049466" result="Passed" start-time="2026-10-19 04:32:59Z" end-time="2026-10-19 04:33:01Z" duration="2.206219" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1019" name="WolfChasesSettlesTelegraphsAndDamagesOnce" fullname="FoundationTests.WolfChasesSettlesTelegraphsAndDamagesOnce" methodname="WolfChasesSettlesTelegraphsAndDamagesOnce" classname="FoundationTests" runstate="Runnable" seed="542177282" result="Passed" start-time="2026-10-19 04:33:01Z" end-time="2026-10-19 04:33:03Z" duration="1.601940" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1022" name="SavedArenaRuntimeTests" fullname="SavedArenaRuntimeTests" classname="SavedArenaRuntimeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-19 04:33:03Z" end-time="2026-10-19 04:33:04Z" duration="0.928963" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1023" name="SavedArenaRunsAndCanBeCaptured" fullname="SavedArenaRuntimeTests.SavedArenaRunsAndCanBeCaptured" methodname="SavedArenaRunsAndCanBeCaptured" classname="SavedArenaRuntimeTests" runstate="Runnable" seed="178885718" result="Passed" start-time="2026-10-19 04:33:03Z" end-time="2026-10-19 04:33:04Z" duration="0.927962" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:/Users/Sarumano/AppData/LocalLow/Sarhuman/Echoes of Aethel v2\TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
