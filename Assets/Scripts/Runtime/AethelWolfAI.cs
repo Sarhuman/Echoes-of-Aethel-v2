@@ -32,6 +32,13 @@ namespace EchoesOfAethel.V2
         private float verticalVelocity;
 
         public bool IsWindingUp => windingUp;
+        // Read-only presentation data. Animation/telegraph never drive these timers or damage.
+        public float WindupProgress => windingUp ? Mathf.Clamp01(1f - (windupEndsAt - Time.time) / windupSeconds) : 0f;
+        public float RecoveryRemaining => Mathf.Max(0f, nextAttackAt - Time.time);
+        public float RecoveryProgress => Mathf.Clamp01(1f - RecoveryRemaining / recoverySeconds);
+        public float BiteRadius => biteRadius;
+        public float MovementSpeed => movementSpeed;
+        public bool HasLivingTarget => target != null && playerHealth != null && !playerHealth.IsDead;
 
         public void Configure(Transform player)
         {

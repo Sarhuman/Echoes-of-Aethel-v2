@@ -19,3 +19,4 @@
 # *.png filter=lfs diff=lfs merge=lfs -text
 Assets/Art/Textures/*.png filter=lfs diff=lfs merge=lfs -text
 Assets/Art/Models/Exported/*.fbx filter=lfs diff=lfs merge=lfs -text
+Assets/Art/Models/Source/*.blend.zip filter=lfs diff=lfs merge=lfs -text
