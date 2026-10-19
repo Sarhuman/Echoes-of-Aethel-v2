@@ -1,0 +1,1 @@
+{"name":"EchoesOfAethel.PlayModeTests","references":["EchoesOfAethel.Runtime","Unity.InputSystem","Unity.RenderPipelines.Universal.Runtime","Unity.RenderPipelines.Core.Runtime"],"optionalUnityReferences":["TestAssemblies"]}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 04:20:46Z" end-time="2026-10-19 04:20:46Z" duration="0,3865065">
+  <test-suite type="TestSuite" id="1000" name="Echoes of Aethel v2" fullname="Echoes of Aethel v2" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 04:20:46Z" end-time="2026-10-19 04:20:46Z" duration="0.386507" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1007" name="EchoesOfAethel.EditModeTests.dll" fullname="C:/Users/Sarumano/Documents/ChatGPT/Echoes of Aethel/Echoes-of-Aethel-v2/Library/ScriptAssemblies/EchoesOfAethel.EditModeTests.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 04:20:46Z" end-time="2026-10-19 04:20:46Z" duration="0.372611" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="43408" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="SavedArenaTests" fullname="SavedArenaTests" classname="SavedArenaTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 04:20:46Z" end-time="2026-10-19 04:20:46Z" duration="0.371142" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="ParameterizedMethod" id="1006" name="CharacterPrefabsPreserveIntegrationContract" fullname="SavedArenaTests.CharacterPrefabsPreserveIntegrationContract" classname="SavedArenaTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-19 04:20:46Z" end-time="2026-10-19 04:20:46Z" duration="0.045164" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1004" name="CharacterPrefabsPreserveIntegrationContract(&quot;PF_Bastiao&quot;,True)" fullname="SavedArenaTests.CharacterPrefabsPreserveIntegrationContract(&quot;PF_Bastiao&quot;,True)" methodname="CharacterPrefabsPreserveIntegrationContract" classname="SavedArenaTests" runstate="Runnable" seed="746815908" result="Passed" start-time="2026-10-19 04:20:46Z" end-time="2026-10-19 04:20:46Z" duration="0.032711" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1005" name="CharacterPrefabsPreserveIntegrationContract(&quot;PF_LoboEtereo&quot;,False)" fullname="SavedArenaTests.CharacterPrefabsPreserveIntegrationContract(&quot;PF_LoboEtereo&quot;,False)" methodname="CharacterPrefabsPreserveIntegrationContract" classname="SavedArenaTests" runstate="Runnable" seed="786837853" result="Passed" start-time="2026-10-19 04:20:46Z" end-time="2026-10-19 04:20:46Z" duration="0.001333" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-case id="1003" name="InitialCreatorRefusesToChangeExistingSceneAndPrefabs" fullname="SavedArenaTests.InitialCreatorRefusesToChangeExistingSceneAndPrefabs" methodname="InitialCreatorRefusesToChangeExistingSceneAndPrefabs" classname="SavedArenaTests" runstate="Runnable" seed="640711291" result="Passed" start-time="2026-10-19 04:20:46Z" end-time="2026-10-19 04:20:46Z" duration="0.059401" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[AETHEL_SCENE_PROTECTED: existing arena was not overwritten.
+]]></output>
+        </test-case>
+        <test-case id="1002" name="SavedArenaOpensWithValidReferences" fullname="SavedArenaTests.SavedArenaOpensWithValidReferences" methodname="SavedArenaOpensWithValidReferences" classname="SavedArenaTests" runstate="Runnable" seed="927669454" result="Passed" start-time="2026-10-19 04:20:46Z" end-time="2026-10-19 04:20:46Z" duration="0.249381" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[AETHEL_SAVED_ARENA_VALIDATED
+Saving results to: C:/Users/Sarumano/AppData/LocalLow/Sarhuman/Echoes of Aethel v2\TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

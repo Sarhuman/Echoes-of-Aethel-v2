@@ -1,0 +1,24 @@
+Unity 6000.6.6f1 / Sprint 01 / 2026-10-19
+Source: configure.log
+AETHEL_WINDOWS_BASELINE_CONFIGURED
+Exiting batchmode successfully now!
+Source: editmode.log
+AETHEL_SCENE_PROTECTED: existing arena was not overwritten.
+AETHEL_SAVED_ARENA_VALIDATED
+Test run completed. Exiting with code 0 (Ok). Run completed.
+Source: playmode.log
+Test run completed. Exiting with code 0 (Ok). Run completed.
+Source: capture.log
+Test run completed. Exiting with code 0 (Ok). Run completed.
+Source: build-windows.log
+AETHEL_SAVED_ARENA_VALIDATED
+AETHEL_WINDOWS_BUILD_PASSED; scene/prefab/meta SHA256 unchanged; 165680838 bytes
+Exiting batchmode successfully now!
+Source: windows-smoke.log
+AETHEL_SMOKE_HARDWARE: Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GHz; AMD Radeon RX 580 2048SP; RAM=16224MB
+AETHEL_BUILD_SMOKE_PASSED
+Source: reopen-validation.log
+AETHEL_SAVED_ARENA_VALIDATED
+Exiting batchmode successfully now!
+Protected scene/prefab/meta snapshot: 60 files; differences after tests/build/run: 0
+Arena SHA256: 71ED2D672CBEC1B453B07762E7655F04D5D97658ED7C0B7697DE418E92747FA8

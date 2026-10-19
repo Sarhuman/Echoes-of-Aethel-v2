@@ -25,4 +25,7 @@
 *.VC.db
 .DS_Store
 Thumbs.db
+.bootstrap/
+*.log
+TestResults/
 # Preserve Assets/*.meta, Packages/, ProjectSettings/ and *.unity.

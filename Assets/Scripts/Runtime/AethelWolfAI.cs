@@ -13,6 +13,14 @@ namespace EchoesOfAethel.V2
         [SerializeField, Min(0f)] private float attackDamage = 15f;
         [SerializeField, Min(.05f)] private float windupSeconds = .45f;
         [SerializeField, Min(.05f)] private float recoverySeconds = .85f;
+        [SerializeField] private Transform visualRoot;
+        [SerializeField] private Transform biteOrigin;
+        [SerializeField, Min(.1f), Tooltip("Contact radius around BiteOrigin; one damage application per windup.")] private float biteRadius = 1.1f;
+        [SerializeField] private LayerMask attackLayers = ~0;
+
+        public Transform BiteOrigin => biteOrigin;
+        public LayerMask AttackLayers => attackLayers;
+        public void ConfigureVisual(Transform visual, Transform bite) { visualRoot = visual; biteOrigin = bite; }
 
         private CharacterController controller;
         private AethelHealth health;
@@ -21,6 +29,9 @@ namespace EchoesOfAethel.V2
         private float windupEndsAt;
         private bool windingUp;
         private Vector3 lastFacing = Vector3.forward;
+        private float verticalVelocity;
+
+        public bool IsWindingUp => windingUp;
 
         public void Configure(Transform player)
         {
@@ -36,6 +47,10 @@ namespace EchoesOfAethel.V2
 
         private void Update()
         {
+            // Gravity is independent of chase/attack state, including recovery and death.
+            if (controller.isGrounded && verticalVelocity < 0f) verticalVelocity = -2f;
+            else verticalVelocity += -25f * Time.deltaTime;
+            controller.Move(Vector3.up * verticalVelocity * Time.deltaTime);
             if (health.IsDead || target == null) return;
             if (playerHealth == null) playerHealth = target.GetComponent<AethelHealth>();
             if (playerHealth == null || playerHealth.IsDead) return;
@@ -48,7 +63,15 @@ namespace EchoesOfAethel.V2
                 if (Time.time >= windupEndsAt)
                 {
                     windingUp = false;
-                    if (distance <= attackRange + .35f) playerHealth.TakeDamage(attackDamage);
+                    bool allowedLayer = (attackLayers.value & (1 << target.gameObject.layer)) != 0;
+                    bool inReach = distance <= attackRange + .35f;
+                    if (biteOrigin != null)
+                    {
+                        var body = target.GetComponent<CharacterController>();
+                        Vector3 point = body != null ? body.bounds.ClosestPoint(biteOrigin.position) : target.position;
+                        inReach = inReach && Vector3.Distance(point, biteOrigin.position) <= biteRadius;
+                    }
+                    if (allowedLayer && inReach) playerHealth.TakeDamage(attackDamage);
                     nextAttackAt = Time.time + recoverySeconds;
                 }
                 return;
@@ -57,9 +80,10 @@ namespace EchoesOfAethel.V2
             if (distance > attackRange && distance > .01f)
             {
                 lastFacing = delta / distance;
-                transform.rotation = Quaternion.Slerp(transform.rotation,
+                Transform turning = visualRoot != null ? visualRoot : transform;
+                turning.rotation = Quaternion.Slerp(turning.rotation,
                     Quaternion.LookRotation(lastFacing), Mathf.Clamp01(12f * Time.deltaTime));
-                controller.Move((lastFacing * movementSpeed + Vector3.down * 2f) * Time.deltaTime);
+                controller.Move(lastFacing * movementSpeed * Time.deltaTime);
             }
             else if (Time.time >= nextAttackAt)
             {

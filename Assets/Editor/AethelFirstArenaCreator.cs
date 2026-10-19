@@ -12,13 +12,16 @@ public static class AethelFirstArenaCreator
     [MenuItem("Echoes of Aethel/Create First Arena (one time)")]
     public static void Create()
     {
+        if (BuildPipeline.isBuildingPlayer || EditorApplication.isCompiling)
+            throw new System.InvalidOperationException("Arena creation is forbidden during compilation/build.");
         if (File.Exists(ScenePath))
         {
-            EditorUtility.DisplayDialog("Scene protected",
-                "The first arena already exists. It was NOT overwritten. Edit the existing scene or create a separate scene manually.", "OK");
+            Debug.Log("AETHEL_SCENE_PROTECTED: existing arena was not overwritten.");
             return;
         }
-        if (!EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+        if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+        if (File.Exists("Assets/Prefabs/Characters/PF_Bastiao.prefab") || File.Exists("Assets/Prefabs/Characters/PF_LoboEtereo.prefab"))
+            throw new System.InvalidOperationException("Character prefabs already exist. Assemble a new scene manually; existing prefabs are protected.");
         if (!AssetDatabase.IsValidFolder("Assets/Scenes"))
             AssetDatabase.CreateFolder("Assets", "Scenes");
 
@@ -28,6 +31,11 @@ public static class AethelFirstArenaCreator
         Material hero = MakeMaterial("AethelHeroPrototype", new Color(.55f, .57f, .70f));
         Material wolf = MakeMaterial("AethelWolfPrototype", new Color(.30f, .59f, .75f));
         Material amber = MakeMaterial("AethelAmber", new Color(.90f, .49f, .18f));
+
+        // Integration fixtures, explicitly NOT finished environment art.
+        EnvironmentPrefab("PF_BosquePilar_01", PrimitiveType.Cylinder, new Vector3(1f, 2f, 1f), stone, new Vector3(-7f, 2f, 5f));
+        EnvironmentPrefab("PF_BosqueRocha_01", PrimitiveType.Sphere, new Vector3(2f, 1.4f, 1.5f), stone, new Vector3(6f, .7f, 6f));
+        EnvironmentPrefab("PF_BosqueArvore_01", PrimitiveType.Cylinder, new Vector3(.8f, 3f, .8f), floor, new Vector3(-7f, 3f, -6f));
 
         GameObject ground = GameObject.CreatePrimitive(PrimitiveType.Cube);
         ground.name = "ArenaFloor";
@@ -54,12 +62,23 @@ public static class AethelFirstArenaCreator
         CharacterController pc = player.AddComponent<CharacterController>();
         pc.height = 2f;
         pc.radius = .38f;
-        pc.center = Vector3.zero;
+        pc.center = Vector3.up;
         player.AddComponent<AethelHealth>();
         AethelPlayerController motor = player.AddComponent<AethelPlayerController>();
         GameObject model = GameObject.CreatePrimitive(PrimitiveType.Capsule);
         model.name = "Visual_PLACEHOLDER_replace_with_rigged_Bastiao";
-        model.transform.SetParent(player.transform, false);
+        Transform playerVisual = Child(player.transform, "VisualRoot", Vector3.zero);
+        model.transform.SetParent(playerVisual, false);
+        model.transform.localPosition = Vector3.up;
+        motor.ConfigureVisual(playerVisual);
+        Transform hitOrigin = Child(playerVisual, "HitOrigin", new Vector3(0f, 1f, .99f));
+        motor.ConfigureHitOrigin(hitOrigin);
+        Animator playerAnimator = playerVisual.gameObject.AddComponent<Animator>();
+        playerAnimator.applyRootMotion = false;
+        player.AddComponent<AethelArtBindings>().Configure(playerAnimator, playerVisual,
+            Child(player.transform, "GroundCheck", Vector3.zero), hitOrigin, pc,
+            Child(playerVisual, "WeaponSocket", new Vector3(.5f, 1f, .3f)),
+            Child(playerVisual, "ShieldSocket", new Vector3(-.5f, 1f, .2f)));
         model.GetComponent<Renderer>().sharedMaterial = hero;
         Object.DestroyImmediate(model.GetComponent<Collider>());
 
@@ -68,15 +87,34 @@ public static class AethelFirstArenaCreator
         CharacterController wc = enemy.AddComponent<CharacterController>();
         wc.height = 1.5f;
         wc.radius = .45f;
+        wc.center = Vector3.up * .75f;
         enemy.AddComponent<AethelHealth>();
         AethelWolfAI ai = enemy.AddComponent<AethelWolfAI>();
         ai.Configure(player.transform);
         GameObject wolfVisual = GameObject.CreatePrimitive(PrimitiveType.Capsule);
         wolfVisual.name = "Visual_PLACEHOLDER_replace_with_rigged_Wolf";
-        wolfVisual.transform.SetParent(enemy.transform, false);
+        Transform wolfRoot = Child(enemy.transform, "VisualRoot", Vector3.zero);
+        wolfVisual.transform.SetParent(wolfRoot, false);
+        wolfVisual.transform.localPosition = Vector3.up * .75f;
         wolfVisual.transform.localScale = new Vector3(1.2f, .7f, 1.6f);
         wolfVisual.GetComponent<Renderer>().sharedMaterial = wolf;
         Object.DestroyImmediate(wolfVisual.GetComponent<Collider>());
+        Transform bite = Child(wolfRoot, "BiteOrigin", new Vector3(0f, .75f, 1f));
+        ai.ConfigureVisual(wolfRoot, bite);
+        Animator wolfAnimator = wolfRoot.gameObject.AddComponent<Animator>();
+        wolfAnimator.applyRootMotion = false;
+        enemy.AddComponent<AethelArtBindings>().Configure(wolfAnimator, wolfRoot,
+            Child(enemy.transform, "GroundCheck", Vector3.zero), bite, wc);
+
+        // Physics and gameplay remain on roots. Replace only visual children with authored rigs.
+        if (!AssetDatabase.IsValidFolder("Assets/Prefabs")) AssetDatabase.CreateFolder("Assets", "Prefabs");
+        if (!AssetDatabase.IsValidFolder("Assets/Prefabs/Characters")) AssetDatabase.CreateFolder("Assets/Prefabs", "Characters");
+        PrefabUtility.SaveAsPrefabAssetAndConnect(player, "Assets/Prefabs/Characters/PF_Bastiao.prefab", InteractionMode.AutomatedAction);
+        // Scene target references belong to the instance, never the prefab asset.
+        ai.Configure(null);
+        PrefabUtility.SaveAsPrefabAssetAndConnect(enemy, "Assets/Prefabs/Characters/PF_LoboEtereo.prefab", InteractionMode.AutomatedAction);
+        ai.Configure(player.transform);
+        PrefabUtility.RecordPrefabInstancePropertyModifications(ai);
 
         GameObject camObject = new GameObject("IsometricCamera");
         camObject.tag = "MainCamera";
@@ -85,7 +123,10 @@ public static class AethelFirstArenaCreator
         camera.orthographicSize = 6f;
         camera.clearFlags = CameraClearFlags.SolidColor;
         camera.backgroundColor = new Color(.085f, .10f, .16f);
+        camObject.AddComponent<AudioListener>();
         camObject.AddComponent<AethelIsometricCamera>().Configure(player.transform);
+        motor.ConfigureCamera(camObject.transform);
+        PrefabUtility.RecordPrefabInstancePropertyModifications(motor);
 
         GameObject sunObject = new GameObject("CoolKeyLight");
         Light sun = sunObject.AddComponent<Light>();
@@ -116,21 +157,52 @@ public static class AethelFirstArenaCreator
 
     private static Material MakeMaterial(string name, Color color)
     {
-        const string root = "Assets/Materials";
+        const string root = "Assets/Art/Materials";
         if (!AssetDatabase.IsValidFolder(root))
-            AssetDatabase.CreateFolder("Assets", "Materials");
+            AssetDatabase.CreateFolder("Assets/Art", "Materials");
         string path = root + "/" + name + ".mat";
         Material existing = AssetDatabase.LoadAssetAtPath<Material>(path);
         if (existing != null) return existing;
 
-        Shader shader = Shader.Find("Universal Render Pipeline/Lit");
+        Shader shader = Shader.Find("Aethel/Painted URP");
         if (shader == null)
             throw new System.InvalidOperationException(
-                "Universal Render Pipeline/Lit shader unavailable. Create this project using Unity Hub > Universal 3D (URP).");
+                "Aethel/Painted URP shader unavailable. Import Assets/Art/Shaders and configure URP first.");
         Material material = new Material(shader);
         material.name = name;
         material.SetColor("_BaseColor", color);
         AssetDatabase.CreateAsset(material, path);
         return material;
+    }
+
+    private static void EnvironmentPrefab(string name, PrimitiveType shape, Vector3 size, Material material, Vector3 position)
+    {
+        const string folder = "Assets/Prefabs/Environment";
+        if (!AssetDatabase.IsValidFolder(folder)) AssetDatabase.CreateFolder("Assets/Prefabs", "Environment");
+        string path = folder + "/" + name + ".prefab";
+        var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(path);
+        GameObject root;
+        if (prefab != null) root = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+        else
+        {
+            root = new GameObject(name);
+            var visual = GameObject.CreatePrimitive(shape);
+            visual.name = "Visual_PLACEHOLDER"; visual.transform.SetParent(root.transform, false);
+            visual.transform.localScale = size;
+            visual.GetComponent<Renderer>().sharedMaterial = material;
+            Object.DestroyImmediate(visual.GetComponent<Collider>());
+            var physics = new GameObject("Collision"); physics.transform.SetParent(root.transform, false);
+            physics.AddComponent<BoxCollider>().size = new Vector3(size.x, shape == PrimitiveType.Cylinder ? size.y * 2 : size.y, size.z);
+            PrefabUtility.SaveAsPrefabAssetAndConnect(root, path, InteractionMode.AutomatedAction);
+        }
+        root.transform.position = position;
+    }
+
+    private static Transform Child(Transform parent, string name, Vector3 position)
+    {
+        var child = new GameObject(name).transform;
+        child.SetParent(parent, false);
+        child.localPosition = position;
+        return child;
     }
 }

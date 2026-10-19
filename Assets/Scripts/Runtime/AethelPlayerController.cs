@@ -29,6 +29,11 @@ namespace EchoesOfAethel.V2
         [Header("References")]
         [SerializeField] private Transform visualRoot;
         [SerializeField] private Transform cameraTransform;
+        [SerializeField, Tooltip("Damage query center; gameplay owns damage, never animation events.")] private Transform hitOrigin;
+
+        public Transform HitOrigin => hitOrigin;
+        public LayerMask AttackLayers => attackLayers;
+        public Transform CameraTransform => cameraTransform;
 
         private CharacterController controller;
         private AethelHealth health;
@@ -47,6 +52,10 @@ namespace EchoesOfAethel.V2
 
         public float Stamina => stamina;
         public bool IsDashing => Time.time < dashEndsAt;
+
+        public void ConfigureVisual(Transform model) { visualRoot = model; }
+        public void ConfigureHitOrigin(Transform origin) { hitOrigin = origin; }
+        public void ConfigureCamera(Transform view) { cameraTransform = view; }
 
         private void Awake()
         {
@@ -136,7 +145,7 @@ namespace EchoesOfAethel.V2
 
         private void Strike()
         {
-            Vector3 center = transform.position + Vector3.up * 1f + facing * (attackRange * .55f);
+            Vector3 center = hitOrigin != null ? hitOrigin.position : controller.bounds.center + facing * (attackRange * .55f);
             int count = Physics.OverlapSphereNonAlloc(center, attackRange * .65f,
                 overlaps, attackLayers, QueryTriggerInteraction.Ignore);
             attackedInSwing.Clear();

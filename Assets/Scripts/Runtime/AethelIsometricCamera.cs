@@ -12,12 +12,14 @@ namespace EchoesOfAethel.V2
         [SerializeField] private Vector3 focusOffset = new Vector3(0f, .8f, 0f);
         private Vector3 velocity;
 
+        private void Start() { Configure(target); }
+
         public void Configure(Transform followTarget)
         {
             target = followTarget;
             if (target == null) return;
             transform.position = target.position + offset;
-            transform.LookAt(target.position + focusOffset);
+            transform.rotation = Quaternion.LookRotation(focusOffset - offset);
         }
 
         private void LateUpdate()
@@ -25,7 +27,7 @@ namespace EchoesOfAethel.V2
             if (target == null) return;
             Vector3 desired = target.position + offset;
             transform.position = Vector3.SmoothDamp(transform.position, desired, ref velocity, smoothTime);
-            transform.LookAt(target.position + focusOffset);
+            transform.rotation = Quaternion.LookRotation(focusOffset - offset);
             Camera view = GetComponent<Camera>();
             view.orthographic = true;
             view.orthographicSize = orthographicSize;

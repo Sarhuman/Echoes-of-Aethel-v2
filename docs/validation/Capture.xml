@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 04:33:52Z" end-time="2026-10-19 04:33:53Z" duration="1,6241211">
+  <test-suite type="TestSuite" id="1014" name="Echoes of Aethel v2" fullname="Echoes of Aethel v2" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-19 04:33:52Z" end-time="2026-10-19 04:33:53Z" duration="1.624121" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1024" name="EchoesOfAethel.PlayModeTests.dll" fullname="C:/Users/Sarumano/Documents/ChatGPT/Echoes of Aethel/Echoes-of-Aethel-v2/Library/ScriptAssemblies/EchoesOfAethel.PlayModeTests.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-19 04:33:52Z" end-time="2026-10-19 04:33:53Z" duration="1.610400" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="40412" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestFixture" id="1022" name="SavedArenaRuntimeTests" fullname="SavedArenaRuntimeTests" classname="SavedArenaRuntimeTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-19 04:33:52Z" end-time="2026-10-19 04:33:53Z" duration="1.607860" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1023" name="SavedArenaRunsAndCanBeCaptured" fullname="SavedArenaRuntimeTests.SavedArenaRunsAndCanBeCaptured" methodname="SavedArenaRunsAndCanBeCaptured" classname="SavedArenaRuntimeTests" runstate="Runnable" seed="1911364258" result="Passed" start-time="2026-10-19 04:33:52Z" end-time="2026-10-19 04:33:53Z" duration="1.587498" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: C:/Users/Sarumano/AppData/LocalLow/Sarhuman/Echoes of Aethel v2\TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

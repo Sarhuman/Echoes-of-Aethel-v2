@@ -13,20 +13,23 @@
 - [Roadmap e critérios de aprovação](docs/production/ROADMAP.md)
 - [Direção artística](docs/ART_DIRECTION.md)
 
-**Estado real:** PR #1 contém scripts iniciais e uma ferramenta de criação da arena **uma única vez**, mas ainda não configura integralmente o projeto Unity nem comprova compilação, jogabilidade ou visual final. Os sistemas `RunManager`, `BoonSystem`, `RoomFlow`, geração procedural e metaprogressão estão **planejados**, não implementados. Aprovação exige playtest na Unity e build Windows.
+**Sprint 01:** integração do template Universal 3D instalado, configurações de Windows, correções nos componentes existentes e contrato de prefabs para arte. [Evidências e limites da validação](docs/validation/SPRINT01.md). Os sistemas `GameFlowManager`, `RunManager`, `RunState`, `RoomFlowController`, `BoonSystem`, `MetaProgressionService` e `SaveService` continuam **planejados**. Placeholders não representam arte aprovada.
 
 ---
 
-## Starting in Unity (one-time)
-1. Install a stable Unity 6 editor via Unity Hub, with **Windows Build Support (IL2CPP)** where needed. Record the exact installed editor version in the first project import PR.
-2. Create a **Universal 3D** project *in a temporary folder*; use the editor-generated `ProjectSettings/`, `Packages/`, URP assets and Input System setup as the source of truth.
-3. Copy the generated `ProjectSettings/` and `Packages/` into this repository root. Do not overwrite its `Assets/Scripts/`. Open the repository root as the Unity project in Hub.
-4. Ensure `Input System` package is installed and **Active Input Handling** includes `Input System Package (New)`. Restart editor if requested.
-5. Wait for compilation. Select **Echoes of Aethel > Create First Arena (one time)**. This writes `Assets/Scenes/Aethel_FirstArena.unity` *once*. Do not invoke it after art adjustments. The command refuses to overwrite an existing scene.
-6. Open the scene, press Play. **WASD/arrows** move; **Space/Shift** dash; **left mouse/J** attack. Gamepad left stick moves; South button dashes; West button attacks.
-7. Commit the generated `ProjectSettings/`, `Packages/`, `Assets/Scenes/`, `Assets/Materials/` and their `.meta` files in a separate integration PR. Test the Windows build in Unity.
+## Abrir e testar
+1. Usar **Unity 6000.6.6f1**, com Windows Build Support. Adicionar a raiz deste repositório no Unity Hub; não criar outro projeto nem copiar conteúdo da v1.
+2. Aguardar a importação dos pacotes fixados: **URP 17.6.0**, **Input System 1.20.0**, **Test Framework 1.8.0**. Active Input Handling já usa o Input System novo.
+3. Abrir `Assets/Scenes/Aethel_FirstArena.unity` e entrar em Play. **WASD/setas** movem; **Space/Shift** executam dash; **mouse esquerdo/J** atacam. Gamepad: stick esquerdo, botão South para dash e West para ataque.
+4. No Test Runner (`Window > General > Test Runner`), executar EditMode e PlayMode. Consultar o relatório para distinguir testes automatizados de revisão manual.
+5. **Echoes of Aethel > Validate saved arena** valida referências sem criar conteúdo. **Build Windows (preserve content)** produz `Builds/Windows/EchoesOfAethel.exe` e verifica SHA256 de cenas, prefabs e metas. Build de desenvolvimento x64/Mono/D3D11; sem dependência de IL2CPP nesta sprint.
+6. Rodar o executável para avaliação manual. O modo opcional `-aethel-smoke -logFile <caminho>` simula movimento/dash, grava `arena-runtime.png` na pasta do executável e encerra com código 0/1. Não é benchmark de performance.
 
-**Current state:** this repository contains editable starter **C# code and a one-time Editor arena creator**, **not** a fully configured/compiled Unity project or a finished art/gameplay build. Runtime test in Editor and Windows export remain pending.
+O gerador **Create First Arena (one time)** é uma ação inicial explícita: recusa sobrescrever a cena e protege prefabs de personagens existentes. Nunca é chamado por importação, compilação ou build. Não o executar para integrar arte: editar os prefabs e a cena existente.
+
+## Integração Meshy Pro / Blender
+
+Seguir [ART_INTEGRATION.md](docs/engineering/ART_INTEGRATION.md). Modelos e texturas em `Assets/Art/`; personagens em `Assets/Prefabs/Characters/`; ambiente em `Assets/Prefabs/Environment/`. Substituir somente o child visual, preservando raiz física, VisualRoot, sockets, origens de dano e GUIDs. `AethelArtBindings` mostra os pontos de integração no Inspector. O shader original `Aethel/Painted URP` não exige assets pagos.
 
 ## Architecture
 - `Assets/Scripts/Runtime/AethelPlayerController.cs`: Input System keyboard/gamepad, movement, dash, stamina and single basic melee attack.
