@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -39,6 +40,7 @@ namespace EchoesOfAethel.V2
         private float attackReadyAt;
         private float stamina;
         private readonly Collider[] overlaps = new Collider[24];
+        private readonly HashSet<AethelHealth> attackedInSwing = new HashSet<AethelHealth>();
         private InputAction move;
         private InputAction dash;
         private InputAction attack;
@@ -137,12 +139,14 @@ namespace EchoesOfAethel.V2
             Vector3 center = transform.position + Vector3.up * 1f + facing * (attackRange * .55f);
             int count = Physics.OverlapSphereNonAlloc(center, attackRange * .65f,
                 overlaps, attackLayers, QueryTriggerInteraction.Ignore);
+            attackedInSwing.Clear();
             for (int i = 0; i < count; i++)
             {
                 Collider target = overlaps[i];
                 if (target == null || target.transform.root == transform.root) continue;
                 AethelHealth other = target.GetComponentInParent<AethelHealth>();
-                if (other != null && other != health) other.TakeDamage(attackDamage);
+                if (other != null && other != health && attackedInSwing.Add(other))
+                    other.TakeDamage(attackDamage);
             }
         }
 
