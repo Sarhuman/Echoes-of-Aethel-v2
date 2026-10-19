@@ -6,7 +6,7 @@ Input FBX remains untouched. Output includes editable authoring data in .blend.z
 Leg targets are solved offline and baked into the same 24-bone Generic rig.
 There is no runtime IK, physics change or animation-driven damage.
 """
-import bpy, math, pathlib, hashlib, json, zipfile
+import bpy, math, pathlib, hashlib, json, zipfile, runpy
 from mathutils import Vector, Quaternion, Matrix
 
 root = pathlib.Path.cwd()
@@ -271,6 +271,11 @@ for name,duration in clips.items():
             pose.keyframe_insert('location',frame=frame,group=pose.name)
     print('AETHEL_WOLF_CLIP',name,'frames',end,'seconds',(end-1)/fps,flush=True)
 
+# Reviewed local mesh offsets are applied after weight/pose authoring, so UVs,
+# skeleton, weights and every animation key remain independent of these edits.
+corrections=runpy.run_path(str(root/'tools/art/apply_wolf_fur_corrections.py'))['apply'](
+    mesh,root/'tools/art/wolf_fur_corrections.json')
+
 rig.animation_data.action=bpy.data.actions['Idle']
 rig.animation_data.action_slot=rig.animation_data.action.slots[0]
 bpy.context.scene.frame_set(1)
@@ -296,6 +301,7 @@ report=dict(source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),output
     blender=bpy.app.version_string,fbx_scale_mode='FBX_SCALE_ALL',bones=len(data.bones),vertices=len(mesh.data.vertices),triangles=sum(len(p.vertices)-2 for p in mesh.data.polygons),
     unweighted_vertices=sum(not v.groups for v in mesh.data.vertices),max_influences=max(len(v.groups) for v in mesh.data.vertices),clips=clips,
     note='Offline two-link planted stance, diagonal gait at 3 m/s; baked FK, no runtime IK. Artist approval remains pending.')
-folder=root/'docs/validation/wolf-surface'; folder.mkdir(parents=True,exist_ok=True)
+folder=root/'docs/validation/wolf-local-fur'; folder.mkdir(parents=True,exist_ok=True)
 (folder/'rig-generation.json').write_text(json.dumps(report,indent=2)+'\n')
+(folder/'correction-statistics.json').write_text(json.dumps(corrections,indent=2)+'\n')
 print('AETHEL_WOLF_RIG_EXPORTED',report,flush=True)

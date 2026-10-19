@@ -15,6 +15,50 @@ public static class AethelWolfRigTools
     public const string Controller = "Assets/Art/Animations/AC_LoboEtereo.controller";
     static readonly string[] States = { "Idle", "Run", "Windup", "Bite", "Recovery", "Death" };
 
+    [Serializable]
+    public sealed class FurContract { public string uvTriangles; public string bindRig; public string animationCurves; }
+    public const string FurContractPath="docs/validation/wolf-local-fur/unity-contract.json";
+
+    // Read-only fingerprints of the imported asset. UV triangles are sorted to
+    // permit normal-related vertex splits/reordering without weakening UV checks.
+    public static FurContract ImportedFurContract()
+    {
+        string Number(float value)=>value.ToString("R",System.Globalization.CultureInfo.InvariantCulture);
+        string Hash(string text) {
+            using(var sha=System.Security.Cryptography.SHA256.Create())
+                return BitConverter.ToString(sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(text))).Replace("-","").ToLowerInvariant();
+        }
+        var skin=AssetDatabase.LoadAssetAtPath<GameObject>(Model).GetComponentInChildren<SkinnedMeshRenderer>();
+        var uv=skin.sharedMesh.uv;var triangles=skin.sharedMesh.triangles;
+        var uvRows=new System.Collections.Generic.List<string>();
+        for(int i=0;i<triangles.Length;i+=3) {
+            var row=Enumerable.Range(0,3).Select(j=>Number(uv[triangles[i+j]].x)+","+Number(uv[triangles[i+j]].y));
+            uvRows.Add(string.Join(";",row.OrderBy(v=>v,StringComparer.Ordinal)));
+        }
+        var bind=skin.sharedMesh.bindposes;
+        var rigRows=skin.bones.Select((bone,i)=>bone.name+"|"+(bone.parent==null?"":bone.parent.name)+"|"+
+            string.Join(",",Enumerable.Range(0,16).Select(j=>Number(bind[i][j])))).OrderBy(v=>v,StringComparer.Ordinal);
+        var curves=new System.Text.StringBuilder();
+        foreach(var clip in AssetDatabase.LoadAllAssetsAtPath(Model).OfType<AnimationClip>().Where(c=>!c.name.StartsWith("__preview__")).OrderBy(c=>c.name,StringComparer.Ordinal)) {
+            curves.AppendLine(clip.name+"|"+Number(clip.length)+"|"+AnimationUtility.GetAnimationEvents(clip).Length);
+            foreach(var binding in AnimationUtility.GetCurveBindings(clip).OrderBy(b=>b.path+"|"+b.propertyName,StringComparer.Ordinal)) {
+                curves.AppendLine(binding.path+"|"+binding.propertyName+"|"+binding.type.FullName);
+                foreach(var key in AnimationUtility.GetEditorCurve(clip,binding).keys)
+                    curves.AppendLine(string.Join(",",new[]{key.time,key.value,key.inTangent,key.outTangent,key.inWeight,key.outWeight}.Select(Number))+","+(int)key.weightedMode);
+            }
+        }
+        return new FurContract { uvTriangles=Hash(string.Join("\n",uvRows.OrderBy(v=>v,StringComparer.Ordinal))),
+            bindRig=Hash(string.Join("\n",rigRows)),animationCurves=Hash(curves.ToString()) };
+    }
+
+    public static void CaptureFurBaseline()
+    {
+        if(File.Exists(FurContractPath))throw new InvalidOperationException("Fur baseline already captured; never overwrite it with revised geometry.");
+        Directory.CreateDirectory(Path.GetDirectoryName(FurContractPath));
+        File.WriteAllText(FurContractPath,JsonUtility.ToJson(ImportedFurContract(),true)+"\n");
+        Debug.Log("AETHEL_WOLF_IMPORTED_FUR_BASELINE_CAPTURED");
+    }
+
     [MenuItem("Echoes of Aethel/Art/Refresh wolf rig export fit (explicit)")]
     public static void RefreshExport()
     {
@@ -41,7 +85,7 @@ public static class AethelWolfRigTools
             float height=FitBindMesh(model,visual,skin);
             var bounds=skin.sharedMesh.bounds;bounds.Expand(bounds.size.magnitude*.7f);skin.localBounds=bounds;
             PrefabUtility.SaveAsPrefabAsset(root,Prefab);
-            var report="docs/validation/wolf-surface/unity-import.txt";
+            var report="docs/validation/wolf-local-fur/unity-import.txt";
             Directory.CreateDirectory(Path.GetDirectoryName(report));
             if(!File.Exists(report))File.WriteAllText(report,"Explicit refresh of existing rig; no scene write.\n");
             if(File.Exists(report))File.WriteAllLines(report,File.ReadAllLines(report).Where(l=>!l.StartsWith("Rest geometry height:")).Concat(new[]{"Rest geometry height: "+height.ToString("F5")}));
@@ -73,8 +117,8 @@ public static class AethelWolfRigTools
                 lines.Add("SAMPLED_VERTICES_DELTA "+a.vertices.Zip(bmesh.vertices,(x,y)=>(x-y).magnitude).Max());
                 Object.DestroyImmediate(a);Object.DestroyImmediate(bmesh);
             }
-            Directory.CreateDirectory("docs/validation/wolf-surface");
-            File.WriteAllLines("docs/validation/wolf-surface/binding-audit.txt",lines);
+            Directory.CreateDirectory("docs/validation/wolf-local-fur");
+            File.WriteAllLines("docs/validation/wolf-local-fur/binding-audit.txt",lines);
             Debug.Log("AETHEL_WOLF_BINDING_AUDIT_COMPLETE");
         }finally{PrefabUtility.UnloadPrefabContents(root);}
     }
