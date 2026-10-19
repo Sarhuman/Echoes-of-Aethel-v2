@@ -41,7 +41,7 @@ public static class AethelWolfRigTools
             float height=FitBindMesh(model,visual,skin);
             var bounds=skin.sharedMesh.bounds;bounds.Expand(bounds.size.magnitude*.7f);skin.localBounds=bounds;
             PrefabUtility.SaveAsPrefabAsset(root,Prefab);
-            var report="docs/validation/wolf-polish/unity-import.txt";
+            var report="docs/validation/wolf-surface/unity-import.txt";
             Directory.CreateDirectory(Path.GetDirectoryName(report));
             if(!File.Exists(report))File.WriteAllText(report,"Explicit refresh of existing rig; no scene write.\n");
             if(File.Exists(report))File.WriteAllLines(report,File.ReadAllLines(report).Where(l=>!l.StartsWith("Rest geometry height:")).Concat(new[]{"Rest geometry height: "+height.ToString("F5")}));
@@ -73,8 +73,8 @@ public static class AethelWolfRigTools
                 lines.Add("SAMPLED_VERTICES_DELTA "+a.vertices.Zip(bmesh.vertices,(x,y)=>(x-y).magnitude).Max());
                 Object.DestroyImmediate(a);Object.DestroyImmediate(bmesh);
             }
-            Directory.CreateDirectory("docs/validation/wolf-polish");
-            File.WriteAllLines("docs/validation/wolf-polish/binding-audit.txt",lines);
+            Directory.CreateDirectory("docs/validation/wolf-surface");
+            File.WriteAllLines("docs/validation/wolf-surface/binding-audit.txt",lines);
             Debug.Log("AETHEL_WOLF_BINDING_AUDIT_COMPLETE");
         }finally{PrefabUtility.UnloadPrefabContents(root);}
     }

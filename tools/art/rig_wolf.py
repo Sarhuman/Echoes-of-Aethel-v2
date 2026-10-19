@@ -122,17 +122,41 @@ for index,p in enumerate(points):
 neighbors=[set() for v in mesh.data.vertices]
 for edge in mesh.data.edges:
     a,b=edge.vertices; neighbors[a].add(b); neighbors[b].add(a)
+neighbor_weights=[]
+for i,adjacent in enumerate(neighbors):
+    values={j:1/((mesh.data.vertices[i].co-mesh.data.vertices[j].co).length+.005)**2 for j in adjacent}
+    total=sum(values.values())
+    neighbor_weights.append({j:.5*v/total+.5/len(adjacent) for j,v in values.items()})
 weights=[{mesh.vertex_groups[g.group].name:g.weight for g in v.groups} for v in mesh.data.vertices]
 for iteration in range(24):
     revised=[]
     for i,w in enumerate(weights):
         if points[i].z<-.31 or not neighbors[i]: revised.append(w); continue
         blended={n:v*.4 for n,v in w.items()}
-        for j in neighbors[i]:
-            for n,v in weights[j].items(): blended[n]=blended.get(n,0)+.6*v/len(neighbors[i])
+        # Narrow fur triangles need coherence across their short edges. Uniform
+        # diffusion treated a long strand edge like its millimetre-wide base.
+        for j,factor in neighbor_weights[i].items():
+            for n,v in weights[j].items(): blended[n]=blended.get(n,0)+.6*v*factor
         best=sorted(blended.items(),key=lambda t:-t[1])[:4]; total=sum(v for n,v in best)
         revised.append({n:v/total for n,v in best})
     weights=revised
+# Keep distal joints from pulling fur on the haunch/mane. Nearest-segment
+# weights and unconstrained diffusion can leak a paw across the upper-leg fur.
+# Transfer that influence up the *same* chain through smooth anatomical bands;
+# soles, jaw, ears, topology, UVs and the authored motion remain untouched.
+for i,w in enumerate(weights):
+    z=points[i].z
+    for chain in ['Fore','Hind']:
+        for side in ['L','R']:
+            for part,parent,low,high in [('Paw','Lower',-.30,-.24),('Lower','Upper',-.23,-.13)]:
+                name=chain+part+'.'+side
+                transfer=w.get(name,0)*smooth(low,high,z)
+                if transfer:
+                    w[name]-=transfer
+                    target=chain+parent+'.'+side
+                    w[target]=w.get(target,0)+transfer
+    best=sorted(w.items(),key=lambda t:-t[1])[:4];total=sum(v for n,v in best)
+    weights[i]={n:v/total for n,v in best if v>1e-8}
 for group in groups.values(): group.remove(list(range(len(points))))
 for i,w in enumerate(weights):
     for n,v in w.items(): groups[n].add([i],v,'REPLACE')
@@ -162,7 +186,8 @@ def plant(chain,side,travel=0,lift=0,running=False):
     hip=upper.head.copy()
     ankle=paw.bone.head_local+Vector((0,travel,lift))
     if running:
-        ankle.y=upper.bone.head_local.y+travel
+        ankle.y=upper.bone.head_local.y+travel+(-.08 if chain=='Fore' else -.04)
+        ankle.x+=(-1 if side=='L' else 1)*(.045 if chain=='Hind' else .025)
     delta=ankle-hip; distance_to=delta.length; direction=delta.normalized()
     a=upper.bone.length; b=lower.bone.length
     reach=min(distance_to,a+b-.00001)
@@ -239,7 +264,7 @@ for name,duration in clips.items():
                             # Hermite swing matches stance velocity at both contacts.
                             slope=3*duration*(1-stance)
                             travel=(2*u**3-3*u*u+1)*stride/2+(u**3-2*u*u+u)*slope+(-2*u**3+3*u*u)*(-stride/2)+(u**3-u*u)*slope
-                            lift=.105*math.sin(math.pi*u)**2
+                            lift=.07*math.sin(math.pi*u)**2
                     plant(chain,side,travel,lift,name=='Run')
         for pose in rig.pose.bones:
             pose.keyframe_insert('rotation_quaternion',frame=frame,group=pose.name)
@@ -271,6 +296,6 @@ report=dict(source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),output
     blender=bpy.app.version_string,fbx_scale_mode='FBX_SCALE_ALL',bones=len(data.bones),vertices=len(mesh.data.vertices),triangles=sum(len(p.vertices)-2 for p in mesh.data.polygons),
     unweighted_vertices=sum(not v.groups for v in mesh.data.vertices),max_influences=max(len(v.groups) for v in mesh.data.vertices),clips=clips,
     note='Offline two-link planted stance, diagonal gait at 3 m/s; baked FK, no runtime IK. Artist approval remains pending.')
-folder=root/'docs/validation/wolf-polish'; folder.mkdir(parents=True,exist_ok=True)
+folder=root/'docs/validation/wolf-surface'; folder.mkdir(parents=True,exist_ok=True)
 (folder/'rig-generation.json').write_text(json.dumps(report,indent=2)+'\n')
 print('AETHEL_WOLF_RIG_EXPORTED',report,flush=True)

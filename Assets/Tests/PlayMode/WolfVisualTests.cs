@@ -39,6 +39,28 @@ public sealed class WolfVisualTests
     }
 
     [UnityTest]
+    public IEnumerator CaptureHaunchAndFurFromBothSidesAndRear()
+    {
+        if(SystemInfo.graphicsDeviceType==GraphicsDeviceType.Null)Assert.Ignore("Real graphics required.");
+        visual.enabled=false;player.transform.position=new Vector3(0,.08f,6);
+        var animator=ai.GetComponentInChildren<Animator>();animator.speed=0;
+        var camera=Camera.main;camera.GetComponent<AethelIsometricCamera>().enabled=false;camera.orthographicSize=1.05f;
+        var views=new[]{new Vector3(3,1.05f,.1f),new Vector3(-3,1.05f,.1f),new Vector3(1.4f,1.3f,-3)};
+        for(int view=0;view<views.Length;view++) {
+            camera.transform.position=ai.transform.position+views[view];
+            camera.transform.LookAt(ai.transform.position+new Vector3(0,.45f,.1f));
+            foreach(string state in new[]{"Run","Windup","Bite","Death"}) {
+                int steps=state=="Run"?8:4;
+                for(int i=0;i<steps;i++) {
+                    animator.Play(state,0,(float)i/(state=="Run"?steps:steps-1));animator.Update(0);
+                    yield return null;Capture("surface-"+view+"-"+state.ToLowerInvariant()+"-"+i+".png");
+                }
+            }
+        }
+        Assert.AreEqual(100,life.Current,"Surface review must not drive combat.");
+    }
+
+    [UnityTest]
     public IEnumerator CapturePolishedGaitAndAttackInRealUrp()
     {
         if(SystemInfo.graphicsDeviceType==GraphicsDeviceType.Null)Assert.Ignore("Real graphics required.");
